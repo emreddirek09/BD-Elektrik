@@ -81,6 +81,7 @@
     <Content Include="Users\assets\img\author-1.jpg" />
     <Content Include="Users\assets\img\author-2.jpg" />
     <Content Include="Users\assets\img\favicon.png" />
+    <Content Include="Users\assets\img\hakkimiz.jpg" />
     <Content Include="Users\assets\img\mini-testimonial-1.jpg" />
     <Content Include="Users\assets\img\mini-testimonial-2.jpg" />
     <Content Include="Users\assets\img\plan2.jpg" />
@@ -147,7 +148,8 @@
     <Content Include="Users\assets\vendor\scrollreveal\scrollreveal.min.js" />
     <Content Include="Users\forms\contact.php" />
     <Content Include="Users\forms\Readme.txt" />
-    <Content Include="Users\WebForm1.aspx" />
+    <Content Include="Users\Default.aspx" />
+    <Content Include="Users\Hakkimizda.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -159,12 +161,19 @@
     <Compile Include="Users\Ana.Master.designer.cs">
       <DependentUpon>Ana.Master</DependentUpon>
     </Compile>
-    <Compile Include="Users\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Users\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Users\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Users\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Hakkimizda.aspx.cs">
+      <DependentUpon>Hakkimizda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Hakkimizda.aspx.designer.cs">
+      <DependentUpon>Hakkimizda.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
