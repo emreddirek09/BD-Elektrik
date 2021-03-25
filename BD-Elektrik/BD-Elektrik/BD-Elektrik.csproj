@@ -150,6 +150,12 @@
     <Content Include="Users\forms\Readme.txt" />
     <Content Include="Users\Default.aspx" />
     <Content Include="Users\Hakkimizda.aspx" />
+    <Content Include="Users\Galeri.aspx" />
+    <Content Include="Users\Referanslar.aspx" />
+    <Content Include="Users\Iletisim.aspx" />
+    <Content Include="Users\ElektrikMalzemelerim.aspx" />
+    <Content Include="Users\Ariza.aspx" />
+    <Content Include="Users\MüsteriYorumlari.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +180,48 @@
     </Compile>
     <Compile Include="Users\Hakkimizda.aspx.designer.cs">
       <DependentUpon>Hakkimizda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Galeri.aspx.cs">
+      <DependentUpon>Galeri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Galeri.aspx.designer.cs">
+      <DependentUpon>Galeri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Referanslar.aspx.cs">
+      <DependentUpon>Referanslar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Referanslar.aspx.designer.cs">
+      <DependentUpon>Referanslar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Iletisim.aspx.cs">
+      <DependentUpon>Iletisim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Iletisim.aspx.designer.cs">
+      <DependentUpon>Iletisim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ElektrikMalzemelerim.aspx.cs">
+      <DependentUpon>ElektrikMalzemelerim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\ElektrikMalzemelerim.aspx.designer.cs">
+      <DependentUpon>ElektrikMalzemelerim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Ariza.aspx.cs">
+      <DependentUpon>Ariza.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Ariza.aspx.designer.cs">
+      <DependentUpon>Ariza.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\MüsteriYorumlari.aspx.cs">
+      <DependentUpon>MüsteriYorumlari.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\MüsteriYorumlari.aspx.designer.cs">
+      <DependentUpon>MüsteriYorumlari.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

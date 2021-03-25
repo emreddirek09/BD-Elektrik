@@ -1,35 +1,23 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Ana.master.cs" Inherits="BD_Elektrik.Users.Ana" %>
 
-<!DOCTYPE html>
-
 <html>
 <head runat="server">
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>Direk Elektrik</title>
+    <title>BD Elektrik</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-
-    <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
     <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- ======= Header/Navbar ======= -->
     <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
         <div class="container">
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +25,7 @@
                 <span></span>
                 <span></span>
             </button>
-            <a class="navbar-brand text-brand" href="index.html">BD<span class="color-b">Elektrik</span></a>
+            <a class="navbar-brand text-brand" href="Default.aspx">BD<span class="color-b">Elektrik</span></a>
             <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
                 <span class="fa fa-search" aria-hidden="true"></span>
             </button>
@@ -50,31 +38,30 @@
                         <a class="nav-link active" href="Hakkimizda.aspx">Hakkımızda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="">Galeri</a>
+                        <a class="nav-link active" href="Galeri.aspx">Galeri</a>
                     </li>
-                    <li class="nav-item">
+                   <%-- <li class="nav-item">
                         <a class="nav-link active" href="">Blog</a>
+                    </li>--%>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Referanslar.aspx">Referanslarım</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="">Referanslarım</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="">İletişim</a>
+                        <a class="nav-link active" href="Iletisim.aspx">İletişim</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hizmetlerimiz
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="property-single.html">Elektrik Malzemelerim</a>
-                            <a class="dropdown-item" href="blog-single.html">Elektrik Arıza</a>
-                            <a class="dropdown-item" href="agents-grid.html">Müşteri Yorumları</a>
+                            <a class="dropdown-item" href="ElektrikMalzemelerim.aspx">Elektrik Malzemelerim</a>
+                            <a class="dropdown-item" href="Ariza.aspx">Elektrik Arıza</a>
+                            <a class="dropdown-item" href="MüsteriYorumlari.aspx">Müşteri Yorumları</a>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- End Header/Navbar -->
     <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -97,7 +84,7 @@
                                 </li>
 
                                 <li class="list-inline-item">
-                                    <a href="#">İletişim</a>
+                                    <a href="Iletisim.aspx">İletişim</a>
                                 </li>
                             </ul>
                         </nav>
@@ -140,14 +127,12 @@
     </form>
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     <div id="preloader"></div>
-    <!-- Vendor JS Files -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
     <script src="assets/vendor/scrollreveal/scrollreveal.min.js"></script>
-    <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>
