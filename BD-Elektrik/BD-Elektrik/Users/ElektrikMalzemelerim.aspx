@@ -39,28 +39,26 @@
                 <div class="card-overlay-a-content">
                   <div class="card-header-a">
                     <h2 class="card-title-a">
-                      <a href="#">204 Mount
-                        <br> Olive Road Two</a>
+                      <a href="#"> Mazleme ismi</a>
                     </h2>
                   </div>
                   <div class="card-body-a">
                     <div class="price-box d-flex">
-                      <span class="price-a">rent | $ 12.000</span>
+                      <span class="price-a">Fiyat: | $ 12.000</span>
                     </div>
-                    <a href="property-single.html" class="link-a">Click here to view
+                    <%--<a href="property-single.html" class="link-a">Click here to view
                       <span class="ion-ios-arrow-forward"></span>
-                    </a>
+                    </a>--%>
                   </div>
-                  <div class="card-footer-a">
+               <%--   <div class="card-footer-a">
                     <ul class="card-info d-flex justify-content-around">
                       <li>
-                        <h4 class="card-info-title">Area</h4>
-                        <span>340m
-                          <sup>2</sup>
+                        <h4 class="card-info-title">Kalite</h4>
+                        <span>1                         
                         </span>
                       </li>
                       <li>
-                        <h4 class="card-info-title">Beds</h4>
+                        <h4 class="card-info-title">Tür</h4>
                         <span>2</span>
                       </li>
                       <li>
@@ -72,7 +70,7 @@
                         <span>1</span>
                       </li>
                     </ul>
-                  </div>
+                  </div>--%>
                 </div>
               </div>
             </div>

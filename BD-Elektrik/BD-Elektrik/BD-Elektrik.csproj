@@ -260,6 +260,16 @@
   <ItemGroup>
     <Folder Include="Admin\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Proje.Business\Proje.Business.csproj">
+      <Project>{644c17ae-3fa3-4317-92c1-e60476c5835f}</Project>
+      <Name>Proje.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Proje.DataAcces\Proje.DataAcces.csproj">
+      <Project>{c867851b-cbd3-425e-9552-2fbc919c4780}</Project>
+      <Name>Proje.DataAcces</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

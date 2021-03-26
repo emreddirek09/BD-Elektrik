@@ -1,0 +1,6 @@
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAcces\bin\Debug\Proje.DataAcces.dll
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAcces\bin\Debug\Proje.DataAcces.pdb
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAcces\obj\Debug\Proje.DataAcces.csprojAssemblyReference.cache
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAcces\obj\Debug\Proje.DataAcces.csproj.CoreCompileInputs.cache
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAcces\obj\Debug\Proje.DataAcces.dll
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAcces\obj\Debug\Proje.DataAcces.pdb
