@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BDElektrikModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ArizaKategori">
+          <Key>
+            <PropertyRef Name="Kategori_id" />
+          </Key>
+          <Property Name="Kategori_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Kategori_Ad" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Arizalar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ArizaKatFK" Type="int" Nullable="false" />
+          <Property Name="ArizaAdi" Type="nvarchar(max)" />
+          <Property Name="Arizaiçerik" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Blog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="isim" Type="nvarchar(max)" />
+          <Property Name="mail" Type="nvarchar(max)" />
+          <Property Name="mesaj" Type="nvarchar(max)" />
+          <Property Name="date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Galeri">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GaleriBaslik" Type="nvarchar(max)" />
+          <Property Name="GaleriResim" Type="nvarchar(max)" />
+          <Property Name="GaleriYazi" Type="nvarchar(max)" />
+          <Property Name="OlusturmaTarihi" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Hakkimizda">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="icerik" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="iletisim">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="isim" Type="nvarchar(max)" />
+          <Property Name="mail" Type="nvarchar(max)" />
+          <Property Name="konu" Type="nvarchar(max)" />
+          <Property Name="mesaj" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KulAdi" Type="nvarchar(max)" />
+          <Property Name="KulSifre" Type="nvarchar(max)" />
+          <Property Name="KulMail" Type="nchar" MaxLength="10" />
+          <Property Name="Yetki" Type="int" />
+        </EntityType>
+        <EntityType Name="MalzemeKategoriler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MalzemeKategariAdi" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Malzemeler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MalzemeFK" Type="int" Nullable="false" />
+          <Property Name="ÜrünAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="ÜrünAciklama" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fiyat" Type="int" />
+          <Property Name="Resim" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Referanslar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReferansAdi" Type="nvarchar(max)" />
+          <Property Name="Resim" Type="nvarchar(max)" />
+          <Property Name="date" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_Arizalar_ArizaKategori">
+          <End Role="ArizaKategori" Type="Self.ArizaKategori" Multiplicity="1" />
+          <End Role="Arizalar" Type="Self.Arizalar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArizaKategori">
+              <PropertyRef Name="Kategori_id" />
+            </Principal>
+            <Dependent Role="Arizalar">
+              <PropertyRef Name="ArizaKatFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Malzemeler_MalzemeKategoriler">
+          <End Role="MalzemeKategoriler" Type="Self.MalzemeKategoriler" Multiplicity="1" />
+          <End Role="Malzemeler" Type="Self.Malzemeler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MalzemeKategoriler">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Malzemeler">
+              <PropertyRef Name="MalzemeFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BDElektrikModelStoreContainer">
+          <EntitySet Name="ArizaKategori" EntityType="Self.ArizaKategori" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Arizalar" EntityType="Self.Arizalar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Galeri" EntityType="Self.Galeri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hakkimizda" EntityType="Self.Hakkimizda" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="iletisim" EntityType="Self.iletisim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MalzemeKategoriler" EntityType="Self.MalzemeKategoriler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Malzemeler" EntityType="Self.Malzemeler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Referanslar" EntityType="Self.Referanslar" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Arizalar_ArizaKategori" Association="Self.FK_Arizalar_ArizaKategori">
+            <End Role="ArizaKategori" EntitySet="ArizaKategori" />
+            <End Role="Arizalar" EntitySet="Arizalar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Malzemeler_MalzemeKategoriler" Association="Self.FK_Malzemeler_MalzemeKategoriler">
+            <End Role="MalzemeKategoriler" EntitySet="MalzemeKategoriler" />
+            <End Role="Malzemeler" EntitySet="Malzemeler" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BDElektrikModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ArizaKategori">
+          <Key>
+            <PropertyRef Name="Kategori_id" />
+          </Key>
+          <Property Name="Kategori_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Kategori_Ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Arizalar" Relationship="Self.FK_Arizalar_ArizaKategori" FromRole="ArizaKategori" ToRole="Arizalar" />
+        </EntityType>
+        <EntityType Name="Arizalar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ArizaKatFK" Type="Int32" Nullable="false" />
+          <Property Name="ArizaAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Arizaiçerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ArizaKategori" Relationship="Self.FK_Arizalar_ArizaKategori" FromRole="Arizalar" ToRole="ArizaKategori" />
+        </EntityType>
+        <EntityType Name="Blog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="isim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mesaj" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="date" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Galeri">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GaleriBaslik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GaleriResim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GaleriYazi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OlusturmaTarihi" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Hakkimizda">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="icerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="iletisim">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="isim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="konu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mesaj" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KulAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KulSifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KulMail" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Yetki" Type="Int32" />
+        </EntityType>
+        <EntityType Name="MalzemeKategoriler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MalzemeKategariAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Malzemeler" Relationship="Self.FK_Malzemeler_MalzemeKategoriler" FromRole="MalzemeKategoriler" ToRole="Malzemeler" />
+        </EntityType>
+        <EntityType Name="Malzemeler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MalzemeFK" Type="Int32" Nullable="false" />
+          <Property Name="ÜrünAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ÜrünAciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fiyat" Type="Int32" />
+          <Property Name="Resim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="MalzemeKategoriler" Relationship="Self.FK_Malzemeler_MalzemeKategoriler" FromRole="Malzemeler" ToRole="MalzemeKategoriler" />
+        </EntityType>
+        <EntityType Name="Referanslar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReferansAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="date" Type="DateTime" Precision="3" />
+        </EntityType>
+        <Association Name="FK_Arizalar_ArizaKategori">
+          <End Role="ArizaKategori" Type="Self.ArizaKategori" Multiplicity="1" />
+          <End Role="Arizalar" Type="Self.Arizalar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArizaKategori">
+              <PropertyRef Name="Kategori_id" />
+            </Principal>
+            <Dependent Role="Arizalar">
+              <PropertyRef Name="ArizaKatFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Malzemeler_MalzemeKategoriler">
+          <End Role="MalzemeKategoriler" Type="Self.MalzemeKategoriler" Multiplicity="1" />
+          <End Role="Malzemeler" Type="Self.Malzemeler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MalzemeKategoriler">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Malzemeler">
+              <PropertyRef Name="MalzemeFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BDElektrikEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ArizaKategori" EntityType="Self.ArizaKategori" />
+          <EntitySet Name="Arizalar" EntityType="Self.Arizalar" />
+          <EntitySet Name="Blog" EntityType="Self.Blog" />
+          <EntitySet Name="Galeri" EntityType="Self.Galeri" />
+          <EntitySet Name="Hakkimizda" EntityType="Self.Hakkimizda" />
+          <EntitySet Name="iletisim" EntityType="Self.iletisim" />
+          <EntitySet Name="Login" EntityType="Self.Login" />
+          <EntitySet Name="MalzemeKategoriler" EntityType="Self.MalzemeKategoriler" />
+          <EntitySet Name="Malzemeler" EntityType="Self.Malzemeler" />
+          <EntitySet Name="Referanslar" EntityType="Self.Referanslar" />
+          <AssociationSet Name="FK_Arizalar_ArizaKategori" Association="Self.FK_Arizalar_ArizaKategori">
+            <End Role="ArizaKategori" EntitySet="ArizaKategori" />
+            <End Role="Arizalar" EntitySet="Arizalar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Malzemeler_MalzemeKategoriler" Association="Self.FK_Malzemeler_MalzemeKategoriler">
+            <End Role="MalzemeKategoriler" EntitySet="MalzemeKategoriler" />
+            <End Role="Malzemeler" EntitySet="Malzemeler" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BDElektrikModelStoreContainer" CdmEntityContainer="BDElektrikEntities">
+          <EntitySetMapping Name="ArizaKategori">
+            <EntityTypeMapping TypeName="BDElektrikModel.ArizaKategori">
+              <MappingFragment StoreEntitySet="ArizaKategori">
+                <ScalarProperty Name="Kategori_id" ColumnName="Kategori_id" />
+                <ScalarProperty Name="Kategori_Ad" ColumnName="Kategori_Ad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Arizalar">
+            <EntityTypeMapping TypeName="BDElektrikModel.Arizalar">
+              <MappingFragment StoreEntitySet="Arizalar">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ArizaKatFK" ColumnName="ArizaKatFK" />
+                <ScalarProperty Name="ArizaAdi" ColumnName="ArizaAdi" />
+                <ScalarProperty Name="Arizaiçerik" ColumnName="Arizaiçerik" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Blog">
+            <EntityTypeMapping TypeName="BDElektrikModel.Blog">
+              <MappingFragment StoreEntitySet="Blog">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="isim" ColumnName="isim" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="mesaj" ColumnName="mesaj" />
+                <ScalarProperty Name="date" ColumnName="date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Galeri">
+            <EntityTypeMapping TypeName="BDElektrikModel.Galeri">
+              <MappingFragment StoreEntitySet="Galeri">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="GaleriBaslik" ColumnName="GaleriBaslik" />
+                <ScalarProperty Name="GaleriResim" ColumnName="GaleriResim" />
+                <ScalarProperty Name="GaleriYazi" ColumnName="GaleriYazi" />
+                <ScalarProperty Name="OlusturmaTarihi" ColumnName="OlusturmaTarihi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hakkimizda">
+            <EntityTypeMapping TypeName="BDElektrikModel.Hakkimizda">
+              <MappingFragment StoreEntitySet="Hakkimizda">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="icerik" ColumnName="icerik" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="iletisim">
+            <EntityTypeMapping TypeName="BDElektrikModel.iletisim">
+              <MappingFragment StoreEntitySet="iletisim">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="isim" ColumnName="isim" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="konu" ColumnName="konu" />
+                <ScalarProperty Name="mesaj" ColumnName="mesaj" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Login">
+            <EntityTypeMapping TypeName="BDElektrikModel.Login">
+              <MappingFragment StoreEntitySet="Login">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="KulAdi" ColumnName="KulAdi" />
+                <ScalarProperty Name="KulSifre" ColumnName="KulSifre" />
+                <ScalarProperty Name="KulMail" ColumnName="KulMail" />
+                <ScalarProperty Name="Yetki" ColumnName="Yetki" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MalzemeKategoriler">
+            <EntityTypeMapping TypeName="BDElektrikModel.MalzemeKategoriler">
+              <MappingFragment StoreEntitySet="MalzemeKategoriler">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="MalzemeKategariAdi" ColumnName="MalzemeKategariAdi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Malzemeler">
+            <EntityTypeMapping TypeName="BDElektrikModel.Malzemeler">
+              <MappingFragment StoreEntitySet="Malzemeler">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="MalzemeFK" ColumnName="MalzemeFK" />
+                <ScalarProperty Name="ÜrünAdi" ColumnName="ÜrünAdi" />
+                <ScalarProperty Name="ÜrünAciklama" ColumnName="ÜrünAciklama" />
+                <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Referanslar">
+            <EntityTypeMapping TypeName="BDElektrikModel.Referanslar">
+              <MappingFragment StoreEntitySet="Referanslar">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ReferansAdi" ColumnName="ReferansAdi" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="date" ColumnName="date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
