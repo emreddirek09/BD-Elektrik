@@ -38,7 +38,8 @@
                             </div>                            
                             <div class="col col-sm-9">
                                 <asp:FileUpload class="form-control" id="Resim" runat="server"/>
-                                <asp:Label ID="lblDurum" CssClass="text-left" runat="server"></asp:Label>
+                                <asp:HiddenField ID="HiddenFieldResim" runat="server" />
+                                <%--<asp:Label ID="lblDurum" CssClass="text-left" runat="server"></asp:Label>--%>
                             </div>
                             <div class="col col-sm-3">
                                 <label class=" form-control-label">Ürün Fiyatı</label>
@@ -64,6 +65,7 @@
                     <asp:Button ID="Entty" runat="server" OnClick="Entty_Click" Text="Ent Veri Çek" />
                      <asp:Button ID="GetByMalzemeler" runat="server" OnClick="GetByMalzemeler_Click" Text="GetByMalzemeler" />
                     <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+
                 </div>
 
             </div>

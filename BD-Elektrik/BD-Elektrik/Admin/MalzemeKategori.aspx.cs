@@ -9,17 +9,19 @@ namespace BD_Elektrik.Admin
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        Proje.Business.MalzemeKategoriler nesne = new Proje.Business.MalzemeKategoriler();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           // Label1.Text = nesne.MalzemeKategoriCount().ToString();
         }
+
         protected void Ekle_Click(object sender, EventArgs e)
         {
-            string KatAdi;
-            Proje.Business.MalzemeKategoriler nesne = new Proje.Business.MalzemeKategoriler();
+            string KatAdi;            
             KatAdi = txt_Kategori.Value;
             var deger = nesne.MalzemeKategoriEkle(KatAdi);
-            Label1.Text = deger;
+            //Label1.Text = deger;            
         }
     }
 }

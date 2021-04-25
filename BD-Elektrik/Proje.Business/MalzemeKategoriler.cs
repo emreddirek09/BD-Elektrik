@@ -10,6 +10,7 @@ namespace Proje.Business
     {
         public string MalzemeKategariAdi { get; set; }
 
+
         public string MalzemeKategoriEkle( string KatgIsim)
         {
             Proje.DataAccess.BDElektrikEntities Ekleme = new DataAccess.BDElektrikEntities();
@@ -19,10 +20,15 @@ namespace Proje.Business
 
             Ekleme.MalzemeKategoriler.Add(yeni);
             Ekleme.SaveChanges();
-            var veriÇek = Listele();
-
-
+            //var veriÇek = Listele();
             return "1";
+        }
+
+        public int MalzemeKategoriCount()
+        {
+            Proje.DataAccess.BDElektrikEntities ent = new DataAccess.BDElektrikEntities();
+            int count = ent.MalzemeKategoriler.Count();
+            return count; 
         }
 
         public List<Proje.DataAccess.MalzemeKategoriler> Listele()
