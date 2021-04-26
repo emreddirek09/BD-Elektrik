@@ -12,9 +12,7 @@ namespace Proje.Business
         public string ÜrünAdi { get; set; }
         public string ÜrünAciklama { get; set; }
         public string Fiyat { get; set; }
-        public string Resim { get; set; }
-
-        
+        public string Resim { get; set; }        
         
         public string MalzemeEkle(int secilen, string ürünAdi, string aciklama, int fiyat, string resim)
         {
@@ -29,15 +27,12 @@ namespace Proje.Business
             Ekleme.SaveChanges();
             return "1";
         }
-
-
         public Proje.DataAccess.MalzemeKategoriler KategoriCek(int idd)
         {
             Proje.DataAccess.BDElektrikEntities ent = new DataAccess.BDElektrikEntities();
             var sonuc = ent.MalzemeKategoriler.Where(p =>p.id==idd);      
             return sonuc.FirstOrDefault();
-        }
-        
+        }        
         public List<Proje.DataAccess.Malzemeler> Listele()
 
         {
@@ -46,7 +41,6 @@ namespace Proje.Business
             var sonuc = ent.Malzemeler.ToList();  //Malzemeler tablosundaki tüm datayı çekiyor.
             return sonuc;
         }
-
         public Proje.DataAccess.Malzemeler GetByMalzemeler(string ÜrünAdi)
         {
             Proje.DataAccess.BDElektrikEntities ent = new DataAccess.BDElektrikEntities();

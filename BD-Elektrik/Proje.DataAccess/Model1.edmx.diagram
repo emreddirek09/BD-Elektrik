@@ -17,6 +17,7 @@
         <EntityTypeShape EntityType="BDElektrikModel.Referanslar" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
         <AssociationConnector Association="BDElektrikModel.FK_Arizalar_ArizaKategori" ManuallyRouted="false" />
         <AssociationConnector Association="BDElektrikModel.FK_Malzemeler_MalzemeKategoriler" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BDElektrikModel.sysdiagrams" Width="1.5" PointX="8.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

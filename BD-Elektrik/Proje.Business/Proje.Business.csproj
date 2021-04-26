@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arizalar.cs" />
     <Compile Include="MalzemeKategoriler.cs" />
     <Compile Include="Malzemeler.cs" />
     <Compile Include="ArizaKategori.cs" />

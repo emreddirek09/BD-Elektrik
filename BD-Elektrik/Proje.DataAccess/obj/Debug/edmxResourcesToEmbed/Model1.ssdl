@@ -15,6 +15,7 @@
     <Property Name="ArizaKatFK" Type="int" Nullable="false" />
     <Property Name="ArizaAdi" Type="nvarchar(max)" />
     <Property Name="Arizaiçerik" Type="nvarchar(max)" />
+    <Property Name="Resim" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Blog">
     <Key>
@@ -90,6 +91,16 @@
     <Property Name="Resim" Type="nvarchar(max)" />
     <Property Name="date" Type="datetime" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <Association Name="FK_Arizalar_ArizaKategori">
     <End Role="ArizaKategori" Type="Self.ArizaKategori" Multiplicity="1" />
     <End Role="Arizalar" Type="Self.Arizalar" Multiplicity="*" />
@@ -125,6 +136,7 @@
     <EntitySet Name="MalzemeKategoriler" EntityType="Self.MalzemeKategoriler" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Malzemeler" EntityType="Self.Malzemeler" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Referanslar" EntityType="Self.Referanslar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Arizalar_ArizaKategori" Association="Self.FK_Arizalar_ArizaKategori">
       <End Role="ArizaKategori" EntitySet="ArizaKategori" />
       <End Role="Arizalar" EntitySet="Arizalar" />

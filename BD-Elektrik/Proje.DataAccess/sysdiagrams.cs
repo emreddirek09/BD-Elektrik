@@ -12,14 +12,12 @@ namespace Proje.DataAccess
     using System;
     using System.Collections.Generic;
     
-    public partial class Arizalar
+    public partial class sysdiagrams
     {
-        public int id { get; set; }
-        public int ArizaKatFK { get; set; }
-        public string ArizaAdi { get; set; }
-        public string Arizaiçerik { get; set; }
-        public string Resim { get; set; }
-    
-        public virtual ArizaKategori ArizaKategori { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

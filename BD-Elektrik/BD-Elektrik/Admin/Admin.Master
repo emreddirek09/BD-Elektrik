@@ -48,8 +48,8 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-tasks"></i>Arızalar</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-fort-awesome"></i><a href="font-fontawesome.html">Kategori Ekle</a></li>
-                            <li><i class="menu-icon ti-themify-logo"></i><a href="font-themify.html">Themefy İçerik Ekle</a></li>
+                            <li><i class="menu-icon fa fa-fort-awesome"></i><a href="ArizaEkleme.aspx">Kategori Ekle</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="ArizaEkleme.aspx">İçerik Ekle</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">

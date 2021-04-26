@@ -44,7 +44,7 @@
                   </div>
                   <div class="card-body-a">
                     <div class="price-box d-flex">
-                      <span class="price-a">Fiyat: | $ 12.000</span>
+                      <span class="price-a">Fiyat: | ₺ 12.000</span>
                     </div>
                     <%--<a href="property-single.html" class="link-a">Click here to view
                       <span class="ion-ios-arrow-forward"></span>

@@ -17,6 +17,7 @@
     <Property Name="ArizaAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Arizaiçerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="ArizaKategori" Relationship="Self.FK_Arizalar_ArizaKategori" FromRole="Arizalar" ToRole="ArizaKategori" />
+    <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Blog">
     <Key>
@@ -137,5 +138,16 @@
       <End Role="MalzemeKategoriler" EntitySet="MalzemeKategoriler" />
       <End Role="Malzemeler" EntitySet="Malzemeler" />
     </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="BDElektrikModel.sysdiagrams" />
   </EntityContainer>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
 </Schema>
