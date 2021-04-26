@@ -136,6 +136,9 @@
     <Content Include="Admin\MalzemeKategori.aspx" />
     <Content Include="Admin\Malzemeler.aspx" />
     <Content Include="Admin\ArizaEkleme.aspx" />
+    <Content Include="Admin\ReferansEkle.aspx" />
+    <Content Include="Admin\HakkimizdakiBilgiler.aspx" />
+    <Content Include="Admin\İletisimBilgileri.aspx" />
     <Content Include="Users\assets\css\style.css" />
     <Content Include="Users\assets\img\about-1.jpg" />
     <Content Include="Users\assets\img\about-2.jpg" />
@@ -256,6 +259,27 @@
     <Compile Include="Admin\ArizaEkleme.aspx.designer.cs">
       <DependentUpon>ArizaEkleme.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ReferansEkle.aspx.cs">
+      <DependentUpon>ReferansEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ReferansEkle.aspx.designer.cs">
+      <DependentUpon>ReferansEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HakkimizdakiBilgiler.aspx.cs">
+      <DependentUpon>HakkimizdakiBilgiler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HakkimizdakiBilgiler.aspx.designer.cs">
+      <DependentUpon>HakkimizdakiBilgiler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\İletisimBilgileri.aspx.cs">
+      <DependentUpon>İletisimBilgileri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\İletisimBilgileri.aspx.designer.cs">
+      <DependentUpon>İletisimBilgileri.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Users\Ana.Master.cs">
       <DependentUpon>Ana.Master</DependentUpon>
@@ -375,6 +399,7 @@
   <ItemGroup>
     <Folder Include="Admin\img\Arizalar\" />
     <Folder Include="Admin\img\Malzemeler\" />
+    <Folder Include="Admin\img\Referanslar\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

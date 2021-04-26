@@ -12,10 +12,14 @@ namespace Proje.DataAccess
     using System;
     using System.Collections.Generic;
     
-    public partial class Referanslar
+    public partial class İletisimBilgileri
     {
         public int id { get; set; }
-        public string ReferansAdi { get; set; }
-        public string Resim { get; set; }
+        public string mail { get; set; }
+        public string telefon { get; set; }
+        public string konum { get; set; }
+        public string instagram { get; set; }
+        public string facebook { get; set; }
+        public string whatsapp { get; set; }
     }
 }

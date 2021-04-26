@@ -43,6 +43,10 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="icerik" Type="nvarchar(max)" />
+    <Property Name="icerik2" Type="nvarchar(max)" />
+    <Property Name="ÖzlüSöz1" Type="nvarchar" MaxLength="50" />
+    <Property Name="ÖzlüSöz2" Type="nvarchar" MaxLength="50" />
+    <Property Name="date" Type="date" />
   </EntityType>
   <EntityType Name="iletisim">
     <Key>
@@ -53,6 +57,18 @@
     <Property Name="mail" Type="nvarchar(max)" />
     <Property Name="konu" Type="nvarchar(max)" />
     <Property Name="mesaj" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="İletisimBilgileri">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mail" Type="nvarchar(max)" />
+    <Property Name="telefon" Type="nchar" MaxLength="11" />
+    <Property Name="konum" Type="nvarchar(max)" />
+    <Property Name="instagram" Type="nvarchar(max)" />
+    <Property Name="facebook" Type="nvarchar(max)" />
+    <Property Name="whatsapp" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Login">
     <Key>
@@ -89,7 +105,6 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ReferansAdi" Type="nvarchar(max)" />
     <Property Name="Resim" Type="nvarchar(max)" />
-    <Property Name="date" Type="datetime" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -132,6 +147,7 @@
     <EntitySet Name="Galeri" EntityType="Self.Galeri" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Hakkimizda" EntityType="Self.Hakkimizda" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="iletisim" EntityType="Self.iletisim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="İletisimBilgileri" EntityType="Self.İletisimBilgileri" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MalzemeKategoriler" EntityType="Self.MalzemeKategoriler" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Malzemeler" EntityType="Self.Malzemeler" Schema="dbo" store:Type="Tables" />

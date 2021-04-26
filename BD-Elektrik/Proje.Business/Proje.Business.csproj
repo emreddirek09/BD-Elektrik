@@ -53,10 +53,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arizalar.cs" />
+    <Compile Include="Hakkimizda.cs" />
     <Compile Include="MalzemeKategoriler.cs" />
     <Compile Include="Malzemeler.cs" />
     <Compile Include="ArizaKategori.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Referanslar.cs" />
+    <Compile Include="İletisimBilgileri.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Proje.DataAccess\Proje.DataAccess.csproj">

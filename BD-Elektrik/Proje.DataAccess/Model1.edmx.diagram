@@ -14,10 +14,11 @@
         <EntityTypeShape EntityType="BDElektrikModel.Login" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BDElektrikModel.MalzemeKategoriler" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="BDElektrikModel.Malzemeler" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="BDElektrikModel.Referanslar" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
         <AssociationConnector Association="BDElektrikModel.FK_Arizalar_ArizaKategori" ManuallyRouted="false" />
         <AssociationConnector Association="BDElektrikModel.FK_Malzemeler_MalzemeKategoriler" ManuallyRouted="false" />
         <EntityTypeShape EntityType="BDElektrikModel.sysdiagrams" Width="1.5" PointX="8.375" PointY="3.75" />
+        <EntityTypeShape EntityType="BDElektrikModel.İletisimBilgileri" Width="1.5" PointX="8.375" PointY="6.75" />
+        <EntityTypeShape EntityType="BDElektrikModel.Referanslar" Width="1.5" PointX="3.25" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

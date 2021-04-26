@@ -16,5 +16,9 @@ namespace Proje.DataAccess
     {
         public int id { get; set; }
         public string icerik { get; set; }
+        public string icerik2 { get; set; }
+        public string ÖzlüSöz1 { get; set; }
+        public string ÖzlüSöz2 { get; set; }
+        public Nullable<System.DateTime> date { get; set; }
     }
 }
