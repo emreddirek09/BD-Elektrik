@@ -37,5 +37,7 @@ namespace Proje.DataAccess
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<İletisimBilgileri> İletisimBilgileri { get; set; }
         public virtual DbSet<Referanslar> Referanslar { get; set; }
+        public virtual DbSet<MüsteriKayıt> MüsteriKayıt { get; set; }
+        public virtual DbSet<MüsteriYorumları> MüsteriYorumları { get; set; }
     }
 }
