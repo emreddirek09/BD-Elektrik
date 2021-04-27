@@ -8,17 +8,15 @@ using System.Web.UI.WebControls;
 
 namespace BD_Elektrik.Admin
 {
-    public partial class WebForm5 : System.Web.UI.Page
+    public partial class WebForm7 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-        //Proje.DataAccess.Referanslar Nesne_referanslar = new Proje.DataAccess.Referanslar();
-        Proje.Business.Referanslar Busines_referanslar = new Proje.Business.Referanslar();
+        Proje.Business.Galeri galeriBussines = new Proje.Business.Galeri();
         protected void Ekle_Click(object sender, EventArgs e)
         {
-            string RefAdi,RefResim;
             string filename;
             if (Resim.HasFile)
             {
@@ -28,7 +26,7 @@ namespace BD_Elektrik.Admin
                     filename = Path.GetFileName(Resim.FileName);
                     if (filename != "")
                     {
-                        Resim.SaveAs(Server.MapPath("img/Referanslar/") + filename);
+                        Resim.SaveAs(Server.MapPath("img/Galeri/") + filename);
                         HiddenFieldResim.Value = filename;
                     }
 
@@ -39,11 +37,12 @@ namespace BD_Elektrik.Admin
 
                 }
             }
-            RefAdi = txt_Ref.Value;
-            RefResim = "img /Referanslar/" + HiddenFieldResim.Value;
-            Busines_referanslar.ReferansEkle(RefAdi, RefResim);
-            Label2.Text = "Ekleme Başarılı";
-
+            string GaleriBaslik = txt_Baslik.Value;
+            string GaleriYazi = txt_Yazi.Value;
+            string resim = "img/Galeri/" + HiddenFieldResim.Value;
+            galeriBussines.GaleriEkle(GaleriBaslik, GaleriYazi, resim);
+            Label1.Text = "Kategori Ekleme Başarılı";
+            
         }
     }
 }

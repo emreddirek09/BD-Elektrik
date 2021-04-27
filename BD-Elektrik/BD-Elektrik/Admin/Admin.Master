@@ -33,10 +33,10 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">    
                     
-                    <%--<li>
-                        <a href="#"><i class="menu-icon ti-email"></i>Galeri </a>
-                    </li>
                     <li>
+                        <a href="Galeri.aspx"><i class="menu-icon ti-email"></i>Galeri </a>
+                    </li>
+                    <%--<li>
                         <a href="#"><i class="menu-icon ti-email"></i>Blog </a>
                     </li>--%>
                     <li>
@@ -44,11 +44,7 @@
                     </li>
                     <li>
                         <a href="ReferansEkle.aspx"><i class="menu-icon ti-rocket"></i>Referanslar</a>
-                    </li>
-                    <li>
-                        <a href="İletisimBilgileri.aspx"><i class=" menu-icon ti-android"></i>İletişim </a>
-                    </li>
-
+                    </li>                   
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-tasks"></i>Arızalar</a>
                         <ul class="sub-menu children dropdown-menu">
@@ -61,7 +57,14 @@
                             <li><i class="menu-icon fa fa-fort-awesome"></i><a href="MalzemeKategori.aspx">Kategori Ekle</a></li>
                             <li><i class="menu-icon ti-themify-logo"></i><a href="Malzemeler.aspx">İçerik Ekle</a></li>
                         </ul>
-                    </li>                    
+                    </li> 
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-tasks"></i>İletişim</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="İletisimBilgileri.aspx">İletişim Bilgileri</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="Müsteri_iletisim.aspx">Müşteri İletişim</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </nav>

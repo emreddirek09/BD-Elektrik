@@ -5,7 +5,7 @@
     <div class="intro intro-carousel">
         <div id="carousel" class="owl-carousel owl-theme">
             <div class="carousel-item-a intro-item bg-image" style="background-image: url(assets/img/slide-1.jpg)">
-                <div class="overlay overlay-a"></div>
+                <%--<div class="overlay overlay-a"></div>
                 <div class="intro-content display-table">
                     <div class="table-cell">
                         <div class="container">
@@ -30,10 +30,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>--%>
             </div>
             <div class="carousel-item-a intro-item bg-image" style="background-image: url(assets/img/slide-2.jpg)">
-                <div class="overlay overlay-a"></div>
+                <%--<div class="overlay overlay-a"></div>
                 <div class="intro-content display-table">
                     <div class="table-cell">
                         <div class="container">
@@ -58,10 +58,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>--%>
             </div>
             <div class="carousel-item-a intro-item bg-image" style="background-image: url(assets/img/slide-3.jpg)">
-                <div class="overlay overlay-a"></div>
+                <%--<div class="overlay overlay-a"></div>
                 <div class="intro-content display-table">
                     <div class="table-cell">
                         <div class="container">
@@ -86,10 +86,78 @@
                             </div>
                         </div>
                     </div>
+                </div>--%>
+            </div>
+        </div>
+    </div>
+    <div class="click-closed"></div>
+    <!--/ Form Search Star /-->
+    <div class="box-collapse">
+        <span class="close-box-collapse right-boxed ion-ios-close"></span>
+        <div class="box-collapse-wrap form">
+            <div class="title-box-d">
+                <h3 class="title-d">Giriş</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mb-2">
+                    <div class="form-group">
+                        <label for="Type">Kullanıcı Adı</label>
+                        <input id="mail" runat="server" type="text" class="form-control form-control-lg form-control-a" placeholder="Mail">
+                    </div>
+                </div>
+                <div class="col-md-12 mb-2">
+                    <div class="form-group">
+                        <label for="Type">Şifre</label>
+                        <input id="sifre" runat="server" type="text" class="form-control form-control-lg form-control-a" placeholder="Şifre">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-b">Giriş Yap</button>
+                </div>
+            </div>
+
+            <div class="title-box-d">
+                <h3 class="title-d">Kayıt</h3>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <div class="form-group">
+                        <label for="Type">İsim</label>
+                        <input type="text" class="form-control form-control-lg form-control-a" placeholder="Ad-Soyad">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <div class="form-group">
+                        <label for="Type">Kullanıcı Adı</label>
+                        <input type="text" class="form-control form-control-lg form-control-a" placeholder="Mail">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <div class="form-group">
+                        <label for="Type">Şifre</label>
+                        <input type="text" class="form-control form-control-lg form-control-a" placeholder="Şifre">
+                    </div>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <div class="form-group">
+                        <label for="Type">Şifre Onay</label>
+                        <input type="text" class="form-control form-control-lg form-control-a" placeholder="Şifre Onay">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                     <label for="Type">Profil Resmi</label>
+                    <asp:FileUpload class="form-control" ID="Resim" runat="server" />
+                    <asp:HiddenField ID="HiddenFieldResim" runat="server" />
+                </div><br /><br /><br />
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-b">Kayıt Ol</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- End Property Search Section -->
+    
     <section class="section-property section-t8">
         <div class="container">
             <div class="row">
@@ -379,18 +447,20 @@
                         <div class="title-box">
                             <h2 class="title-a">Müşteri Yorumları</h2>
                         </div>
+                        <div class="title-link">
+                            <a href="MüsteriYorumlari.aspx">Devamı
+                  <span class="ion-ios-arrow-forward"></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div id="testimonial-carousel" class="owl-carousel owl-arrow">
                 <div class="carousel-item-a">
                     <div class="testimonials-box">
                         <div class="row">
-                            
                             <div class="col-sm-12 col-md-12">
-                                <div class="testimonial-ico">
-                                    <span class="ion-ios-quote"></span>
-                                </div>
                                 <div class="testimonials-content">
                                     <p class="testimonial-text">
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
@@ -406,7 +476,7 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>

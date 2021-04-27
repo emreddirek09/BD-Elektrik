@@ -17,7 +17,7 @@
                                 <li class="breadcrumb-item">
                                     <a href="Default.aspx">AnaSayfa</a>
                                 </li>
-                                <li class="breadcrumb-item active" aria-current="page"> Yorumlar </li>
+                                <li class="breadcrumb-item active" aria-current="page">Yorumlar </li>
                             </ol>
                         </nav>
                     </div>
@@ -25,7 +25,7 @@
             </div>
         </section>
         <section class="section-testimonials nav-arrow-a">
-            <div class="container">                
+            <div class="container">
                 <div id="testimonial-carousel" class="owl-carousel owl-arrow owl-loaded owl-drag">
                     <div class="owl-stage-outer">
                         <div class="owl-stage" style="transform: translate3d(-1110px, 0px, 0px); transition: all 0s ease 0s; width: 2220px;">
@@ -58,7 +58,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="owl-item animated owl-animated-in fadeInUp active" style="width: 1110px;">
+                            <%--<div class="owl-item animated owl-animated-in fadeInUp active" style="width: 1110px;">
                                 <div class="carousel-item-a">
                                     <div class="testimonials-box">
                                         <div class="row">
@@ -86,9 +86,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>--%>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
             </div>
         </section>

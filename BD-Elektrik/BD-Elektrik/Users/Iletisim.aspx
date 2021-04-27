@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Users/Ana.Master" AutoEventWireup="true" CodeBehind="Iletisim.aspx.cs" Inherits="BD_Elektrik.Users.WebForm5" %>
+﻿<%@ Page Title="İletişim" EnableEventValidation="false" Language="C#" MasterPageFile="~/Users/Ana.Master" AutoEventWireup="true" CodeBehind="Iletisim.aspx.cs" Inherits="BD_Elektrik.Users.WebForm5" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main id="main">
 
@@ -44,30 +44,31 @@
                   <div class="row">
                     <div class="col-md-6 mb-3">
                       <div class="form-group">
-                        <input type="text" name="name" class="form-control form-control-lg form-control-a" placeholder="İsim" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                        <input id="isim" runat="server" type="text" name="name" class="form-control form-control-lg form-control-a" placeholder="İsim" data-rule="minlen:4" >
                         <div class="validate"></div>
                       </div>
                     </div>
                     <div class="col-md-6 mb-3">
                       <div class="form-group">
-                        <input name="email" type="email" class="form-control form-control-lg form-control-a" placeholder="Mail" data-rule="email" data-msg="Please enter a valid email">
+                        <input id="mail" runat="server" type="email" class="form-control form-control-lg form-control-a" placeholder="Mail" data-rule="email" >
                         <div class="validate"></div>
                       </div>
                     </div>
                     <div class="col-md-12 mb-3">
                       <div class="form-group">
-                        <input type="text" name="subject" class="form-control form-control-lg form-control-a" placeholder="Konu" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+                        <input id="konu" runat="server" type="text" name="subject" class="form-control form-control-lg form-control-a" placeholder="Konu" data-rule="minlen:4" >
                         <div class="validate"></div>
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <textarea name="message" class="form-control" cols="45" rows="8" data-rule="required" data-msg="Please write something for us" placeholder="Mesajınız"></textarea>
+                        <textarea id="mesaj" runat="server" name="message" class="form-control" cols="45" rows="8" data-rule="required" placeholder="Mesajınız"></textarea>
                         <div class="validate"></div>
                       </div>
                     </div>
                     <div class="col-md-12 text-center">
-                      <button type="submit" class="btn btn-a">Mesaj Gönderin</button>
+                        <asp:Button ID="Gönder" OnClick="Gönder_Click"  class="btn btn-a" runat="server" Text="Mesaj Gönderin" />                        
+
                     </div>
                   </div>
                 </form>

@@ -62,6 +62,7 @@
           <Property Name="mail" Type="nvarchar(max)" />
           <Property Name="konu" Type="nvarchar(max)" />
           <Property Name="mesaj" Type="nvarchar" MaxLength="50" />
+          <Property Name="date" Type="datetime" />
         </EntityType>
         <EntityType Name="İletisimBilgileri">
           <Key>
@@ -230,6 +231,7 @@
           <Property Name="mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="konu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="mesaj" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="date" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Login">
           <Key>
@@ -399,6 +401,7 @@
           <EntitySetMapping Name="iletisim">
             <EntityTypeMapping TypeName="BDElektrikModel.iletisim">
               <MappingFragment StoreEntitySet="iletisim">
+                <ScalarProperty Name="date" ColumnName="date" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="isim" ColumnName="isim" />
                 <ScalarProperty Name="mail" ColumnName="mail" />

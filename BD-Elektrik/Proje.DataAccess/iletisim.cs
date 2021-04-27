@@ -19,5 +19,6 @@ namespace Proje.DataAccess
         public string mail { get; set; }
         public string konu { get; set; }
         public string mesaj { get; set; }
+        public Nullable<System.DateTime> date { get; set; }
     }
 }

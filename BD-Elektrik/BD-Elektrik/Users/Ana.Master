@@ -19,16 +19,8 @@
 </head>
 <body>
     <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
-        <div class="container">
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <a class="navbar-brand text-brand" href="Default.aspx">BD<span class="color-b">Elektrik</span></a>
-            <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
-                <span class="fa fa-search" aria-hidden="true"></span>
-            </button>
+        <div class="container">            
+            <a class="navbar-brand text-brand" href="Default.aspx">BD<span class="color-b">Elektrik</span></a>            
             <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -40,7 +32,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="Galeri.aspx">Galeri</a>
                     </li>
-                   <%-- <li class="nav-item">
+                    <%-- <li class="nav-item">
                         <a class="nav-link active" href="">Blog</a>
                     </li>--%>
                     <li class="nav-item">
@@ -58,12 +50,68 @@
                             <a class="dropdown-item" href="MüsteriYorumlari.aspx">Müşteri Yorumları</a>
                         </div>
                     </li>
+                    &emsp;&emsp;                    
+                    <li>
+                        <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse2" data-target="#navbarTogglerDemo02" aria-expanded="false">
+                            <span class="fa fa-user-plus" aria-hidden="true"></span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
     <form id="form1" runat="server">
         <div>
+            <div class="click-closed"></div>
+            <!--/ Form Search Star /-->
+            <div class="box-collapse">
+                <span class="close-box-collapse right-boxed ion-ios-close"></span>
+                <div class="box-collapse-wrap form">
+
+                    <div class="title-box-d">
+                        <h3 class="title-d">Kayıt</h3>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-2">
+                            <div class="form-group">
+                                <label for="Type">İsim</label>
+                                <input type="text" class="form-control form-control-lg form-control-a" placeholder="Ad-Soyad">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <div class="form-group">
+                                <label for="Type">Kullanıcı Adı</label>
+                                <input type="text" class="form-control form-control-lg form-control-a" placeholder="Mail">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <div class="form-group">
+                                <label for="Type">Şifre</label>
+                                <input type="text" class="form-control form-control-lg form-control-a" placeholder="Şifre">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <div class="form-group">
+                                <label for="Type">Şifre Onay</label>
+                                <input type="text" class="form-control form-control-lg form-control-a" placeholder="Şifre Onay">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="Type">Profil Resmi</label>
+                            <asp:FileUpload class="form-control" ID="Resim" runat="server" />
+                            <asp:HiddenField ID="HiddenFieldResim" runat="server" />
+                        </div>
+                        <br />
+                        <br />
+                        <br />
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-b">Kayıt Ol</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Property Search Section -->
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

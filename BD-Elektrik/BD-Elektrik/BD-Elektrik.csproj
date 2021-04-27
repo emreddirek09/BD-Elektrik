@@ -138,6 +138,8 @@
     <Content Include="Admin\ArizaEkleme.aspx" />
     <Content Include="Admin\ReferansEkle.aspx" />
     <Content Include="Admin\HakkimizdakiBilgiler.aspx" />
+    <Content Include="Admin\Galeri.aspx" />
+    <Content Include="Admin\Müsteri_iletisim.aspx" />
     <Content Include="Admin\İletisimBilgileri.aspx" />
     <Content Include="Users\assets\css\style.css" />
     <Content Include="Users\assets\img\about-1.jpg" />
@@ -273,6 +275,20 @@
     <Compile Include="Admin\HakkimizdakiBilgiler.aspx.designer.cs">
       <DependentUpon>HakkimizdakiBilgiler.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Galeri.aspx.cs">
+      <DependentUpon>Galeri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Galeri.aspx.designer.cs">
+      <DependentUpon>Galeri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Müsteri_iletisim.aspx.cs">
+      <DependentUpon>Müsteri_iletisim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Müsteri_iletisim.aspx.designer.cs">
+      <DependentUpon>Müsteri_iletisim.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\İletisimBilgileri.aspx.cs">
       <DependentUpon>İletisimBilgileri.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -398,6 +414,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\img\Arizalar\" />
+    <Folder Include="Admin\img\Galeri\" />
     <Folder Include="Admin\img\Malzemeler\" />
     <Folder Include="Admin\img\Referanslar\" />
   </ItemGroup>

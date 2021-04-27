@@ -13,5 +13,21 @@ namespace BD_Elektrik.Users
         {
 
         }
+        Proje.Business.iletisim iletisimNesne = new Proje.Business.iletisim();
+        protected void Gönder_Click(object sender, EventArgs e)
+        {
+            string maill, isimm, konuu, mesajj;
+            maill = mail.Value;
+            isimm = isim.Value;
+            konuu = konu.Value;
+            mesajj = mesaj.Value;
+            iletisimNesne.İletisimEkle(isimm, maill, konuu, mesajj);              
+            Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "BİLGİLENDİRME ", "<script>alert(Gönderim Başarılı);</script>");
+
+            mail.Value = "";
+            isim.Value = "";
+            konu.Value = "";
+            mesaj.Value = "";
+        }
     }
 }

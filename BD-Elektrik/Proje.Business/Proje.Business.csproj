@@ -53,7 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arizalar.cs" />
+    <Compile Include="Galeri.cs" />
     <Compile Include="Hakkimizda.cs" />
+    <Compile Include="iletisim.cs" />
     <Compile Include="MalzemeKategoriler.cs" />
     <Compile Include="Malzemeler.cs" />
     <Compile Include="ArizaKategori.cs" />

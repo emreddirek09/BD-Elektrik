@@ -57,6 +57,7 @@
     <EntitySetMapping Name="iletisim">
       <EntityTypeMapping TypeName="BDElektrikModel.iletisim">
         <MappingFragment StoreEntitySet="iletisim">
+          <ScalarProperty Name="date" ColumnName="date" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="isim" ColumnName="isim" />
           <ScalarProperty Name="mail" ColumnName="mail" />

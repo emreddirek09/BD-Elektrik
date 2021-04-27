@@ -38,9 +38,7 @@ namespace BD_Elektrik.Admin
             KatIsim = txt_Kategori.Value;
             arizaKategoriBussines.ArizaKatEkle(KatIsim);
             Label1.Text = "Kategori Ekleme Başarılı";           
-            txt_Kategori.Value = "";
-
-            
+            txt_Kategori.Value = "";           
 
         }
 
