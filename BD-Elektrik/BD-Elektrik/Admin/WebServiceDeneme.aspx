@@ -3,8 +3,10 @@
 
     <asp:GridView ID="GridView1" runat="server"></asp:GridView>
     <label id="lbl" runat="server"> </label>
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    ASMX Servis Deneme: <asp:Label ID="Label1" runat="server" ></asp:Label>
     <asp:Timer ID="Timer1" runat="server" OnTick="Timer1_Tick"></asp:Timer>
     <asp:ScriptManager ID="ScriptManager1" runat="server">
-    </asp:ScriptManager>
+    </asp:ScriptManager><br />
+     WCF Servis Deneme: <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+
 </asp:Content>

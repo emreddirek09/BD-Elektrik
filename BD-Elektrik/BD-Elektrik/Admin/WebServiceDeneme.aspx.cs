@@ -13,6 +13,9 @@ namespace BD_Elektrik.Admin
      
         protected void Page_Load(object sender, EventArgs e)
         {
+            var deneme = new WSDLServisAdDeneme.WcfServiceClient().ADGetir("Emre");
+            Label2.Text = deneme;
+
             Timer1.Interval = 1000;
             Timer1.Enabled = true;            
         }
