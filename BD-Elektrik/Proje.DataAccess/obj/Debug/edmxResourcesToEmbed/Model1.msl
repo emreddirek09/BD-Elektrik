@@ -130,5 +130,27 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="MüsteriKayıt">
+      <EntityTypeMapping TypeName="BDElektrikModel.MüsteriKayıt">
+        <MappingFragment StoreEntitySet="MüsteriKayıt">
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="sifreOnay" ColumnName="sifreOnay" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="isim" ColumnName="isim" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MüsteriYorumları">
+      <EntityTypeMapping TypeName="BDElektrikModel.MüsteriYorumları">
+        <MappingFragment StoreEntitySet="MüsteriYorumları">
+          <ScalarProperty Name="Müsteri_Yorum" ColumnName="Müsteri_Yorum" />
+          <ScalarProperty Name="Müsteri_id" ColumnName="Müsteri_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

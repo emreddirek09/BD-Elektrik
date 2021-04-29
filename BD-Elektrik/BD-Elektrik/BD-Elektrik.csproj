@@ -140,6 +140,7 @@
     <Content Include="Admin\HakkimizdakiBilgiler.aspx" />
     <Content Include="Admin\Galeri.aspx" />
     <Content Include="Admin\Müsteri_iletisim.aspx" />
+    <Content Include="Admin\WebServiceDeneme.aspx" />
     <Content Include="Admin\İletisimBilgileri.aspx" />
     <Content Include="Users\assets\css\style.css" />
     <Content Include="Users\assets\img\about-1.jpg" />
@@ -230,7 +231,9 @@
     <Content Include="Users\ElektrikMalzemelerim.aspx" />
     <Content Include="Users\Ariza.aspx" />
     <Content Include="Users\MüsteriYorumlari.aspx" />
+    <Content Include="Users\MüşteriSayfası.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebServis\WebService1.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\Admin.Master.cs">
@@ -288,6 +291,13 @@
     </Compile>
     <Compile Include="Admin\Müsteri_iletisim.aspx.designer.cs">
       <DependentUpon>Müsteri_iletisim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\WebServiceDeneme.aspx.cs">
+      <DependentUpon>WebServiceDeneme.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\WebServiceDeneme.aspx.designer.cs">
+      <DependentUpon>WebServiceDeneme.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\İletisimBilgileri.aspx.cs">
       <DependentUpon>İletisimBilgileri.aspx</DependentUpon>
@@ -360,6 +370,17 @@
     <Compile Include="Users\MüsteriYorumlari.aspx.designer.cs">
       <DependentUpon>MüsteriYorumlari.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Users\MüşteriSayfası.aspx.cs">
+      <DependentUpon>MüşteriSayfası.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\MüşteriSayfası.aspx.designer.cs">
+      <DependentUpon>MüşteriSayfası.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebServis\WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Admin.Master" />
@@ -416,6 +437,7 @@
     <Folder Include="Admin\img\Arizalar\" />
     <Folder Include="Admin\img\Galeri\" />
     <Folder Include="Admin\img\Malzemeler\" />
+    <Folder Include="Admin\img\Müsteri\" />
     <Folder Include="Admin\img\Referanslar\" />
   </ItemGroup>
   <PropertyGroup>

@@ -31,8 +31,10 @@
         <nav class="navbar navbar-expand-sm navbar-default">
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
-                <ul class="nav navbar-nav">    
-                    
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="WebServiceDeneme.aspx"><i class="menu-icon ti-email"></i>Web Servis</a>
+                    </li>                    
                     <li>
                         <a href="Galeri.aspx"><i class="menu-icon ti-email"></i>Galeri </a>
                     </li>

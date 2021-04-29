@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BD-Elektrik, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BD-Elektrik\bin\BD-Elektrik.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -44,6 +48,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,8 +64,11 @@
     <Compile Include="MalzemeKategoriler.cs" />
     <Compile Include="Malzemeler.cs" />
     <Compile Include="ArizaKategori.cs" />
+    <Compile Include="MüsteriGiris.cs" />
+    <Compile Include="MüsteriKayıt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Referanslar.cs" />
+    <Compile Include="WebServisDeneme.cs" />
     <Compile Include="İletisimBilgileri.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -13,3 +13,6 @@ C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.Business\obj\Debug\Proj
 C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.Business\bin\Debug\Proje.Business.dll.config
 C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.Business\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.Business\bin\Debug\BD-Elektrik.dll
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.Business\bin\Debug\BD-Elektrik.pdb
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.Business\bin\Debug\BD-Elektrik.dll.config

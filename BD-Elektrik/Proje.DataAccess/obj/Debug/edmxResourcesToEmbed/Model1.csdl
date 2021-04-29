@@ -136,6 +136,12 @@
     <EntitySet Name="sysdiagrams" EntityType="BDElektrikModel.sysdiagrams" />
     <EntitySet Name="İletisimBilgileri" EntityType="BDElektrikModel.İletisimBilgileri" />
     <EntitySet Name="Referanslar" EntityType="BDElektrikModel.Referanslar" />
+    <EntitySet Name="MüsteriKayıt" EntityType="BDElektrikModel.MüsteriKayıt" />
+    <EntitySet Name="MüsteriYorumları" EntityType="BDElektrikModel.MüsteriYorumları" />
+    <AssociationSet Name="FK_MüsteriYorumları_MüsteriKayıt" Association="BDElektrikModel.FK_MüsteriYorumları_MüsteriKayıt">
+      <End Role="MüsteriKayıt" EntitySet="MüsteriKayıt" />
+      <End Role="MüsteriYorumları" EntitySet="MüsteriYorumları" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -167,4 +173,38 @@
     <Property Name="ReferansAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
+  <EntityType Name="MüsteriKayıt">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="isim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sifreOnay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MüsteriYorumları" Relationship="BDElektrikModel.FK_MüsteriYorumları_MüsteriKayıt" FromRole="MüsteriKayıt" ToRole="MüsteriYorumları" />
+  </EntityType>
+  <EntityType Name="MüsteriYorumları">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Müsteri_id" Type="Int32" Nullable="false" />
+    <Property Name="Müsteri_Yorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MüsteriKayıt" Relationship="BDElektrikModel.FK_MüsteriYorumları_MüsteriKayıt" FromRole="MüsteriYorumları" ToRole="MüsteriKayıt" />
+  </EntityType>
+  <Association Name="FK_MüsteriYorumları_MüsteriKayıt">
+    <End Type="BDElektrikModel.MüsteriKayıt" Role="MüsteriKayıt" Multiplicity="1" />
+    <End Type="BDElektrikModel.MüsteriYorumları" Role="MüsteriYorumları" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MüsteriKayıt">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="MüsteriYorumları">
+        <PropertyRef Name="Müsteri_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>
