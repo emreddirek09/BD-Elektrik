@@ -36,5 +36,10 @@ namespace Proje.Business
             }
             return "Kayıt Başarılı";
         }
+        public int KayıtListeCount()
+        {
+            int count = entities.MüsteriKayıt.Count();
+            return count;
+        }
     }
 }

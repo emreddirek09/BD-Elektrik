@@ -17,7 +17,7 @@ namespace Proje.DataAccess
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public MüsteriKayıt()
         {
-            this.MüsteriYorumları = new HashSet<MüsteriYorumları>();
+            this.Login = new HashSet<Login>();
         }
     
         public int id { get; set; }
@@ -29,6 +29,6 @@ namespace Proje.DataAccess
         public string Resim { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MüsteriYorumları> MüsteriYorumları { get; set; }
+        public virtual ICollection<Login> Login { get; set; }
     }
 }

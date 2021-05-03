@@ -18,5 +18,10 @@ namespace BD_Elektrik.Users
         {
 
         }
+        protected void cikis_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("Default.aspx");
+        }
     }
 }

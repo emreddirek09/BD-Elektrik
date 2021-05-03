@@ -66,17 +66,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Login">
-      <EntityTypeMapping TypeName="BDElektrikModel.Login">
-        <MappingFragment StoreEntitySet="Login">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="KulAdi" ColumnName="KulAdi" />
-          <ScalarProperty Name="KulSifre" ColumnName="KulSifre" />
-          <ScalarProperty Name="KulMail" ColumnName="KulMail" />
-          <ScalarProperty Name="Yetki" ColumnName="Yetki" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="MalzemeKategoriler">
       <EntityTypeMapping TypeName="BDElektrikModel.MalzemeKategoriler">
         <MappingFragment StoreEntitySet="MalzemeKategoriler">
@@ -148,6 +137,16 @@
         <MappingFragment StoreEntitySet="MüsteriYorumları">
           <ScalarProperty Name="Müsteri_Yorum" ColumnName="Müsteri_Yorum" />
           <ScalarProperty Name="Müsteri_id" ColumnName="Müsteri_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Login">
+      <EntityTypeMapping TypeName="BDElektrikModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="MüsteriFKid" ColumnName="MüsteriFKid" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="Yetki" ColumnName="Yetki" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>

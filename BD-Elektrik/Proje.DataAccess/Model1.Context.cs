@@ -31,7 +31,6 @@ namespace Proje.DataAccess
         public virtual DbSet<Galeri> Galeri { get; set; }
         public virtual DbSet<Hakkimizda> Hakkimizda { get; set; }
         public virtual DbSet<iletisim> iletisim { get; set; }
-        public virtual DbSet<Login> Login { get; set; }
         public virtual DbSet<MalzemeKategoriler> MalzemeKategoriler { get; set; }
         public virtual DbSet<Malzemeler> Malzemeler { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
@@ -39,5 +38,6 @@ namespace Proje.DataAccess
         public virtual DbSet<Referanslar> Referanslar { get; set; }
         public virtual DbSet<MüsteriKayıt> MüsteriKayıt { get; set; }
         public virtual DbSet<MüsteriYorumları> MüsteriYorumları { get; set; }
+        public virtual DbSet<Login> Login { get; set; }
     }
 }

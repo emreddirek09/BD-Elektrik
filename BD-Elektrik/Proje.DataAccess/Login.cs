@@ -15,9 +15,10 @@ namespace Proje.DataAccess
     public partial class Login
     {
         public int id { get; set; }
-        public string KulAdi { get; set; }
-        public string KulSifre { get; set; }
-        public string KulMail { get; set; }
         public Nullable<int> Yetki { get; set; }
+        public Nullable<System.DateTime> date { get; set; }
+        public int MüsteriFKid { get; set; }
+    
+        public virtual MüsteriKayıt MüsteriKayıt { get; set; }
     }
 }

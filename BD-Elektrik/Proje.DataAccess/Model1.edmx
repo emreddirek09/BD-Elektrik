@@ -81,10 +81,9 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="KulAdi" Type="nvarchar(max)" />
-          <Property Name="KulSifre" Type="nvarchar(max)" />
-          <Property Name="KulMail" Type="nchar" MaxLength="10" />
           <Property Name="Yetki" Type="int" />
+          <Property Name="date" Type="datetime" />
+          <Property Name="MüsteriFKid" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="MalzemeKategoriler">
           <Key>
@@ -154,6 +153,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Login_MüsteriKayıt">
+          <End Role="MüsteriKayıt" Type="Self.MüsteriKayıt" Multiplicity="1" />
+          <End Role="Login" Type="Self.Login" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MüsteriKayıt">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Login">
+              <PropertyRef Name="MüsteriFKid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Malzemeler_MalzemeKategoriler">
           <End Role="MalzemeKategoriler" Type="Self.MalzemeKategoriler" Multiplicity="1" />
           <End Role="Malzemeler" Type="Self.Malzemeler" Multiplicity="*" />
@@ -163,18 +174,6 @@
             </Principal>
             <Dependent Role="Malzemeler">
               <PropertyRef Name="MalzemeFK" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_MüsteriYorumları_MüsteriKayıt">
-          <End Role="MüsteriKayıt" Type="Self.MüsteriKayıt" Multiplicity="1" />
-          <End Role="MüsteriYorumları" Type="Self.MüsteriYorumları" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="MüsteriKayıt">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="MüsteriYorumları">
-              <PropertyRef Name="Müsteri_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -197,13 +196,13 @@
             <End Role="ArizaKategori" EntitySet="ArizaKategori" />
             <End Role="Arizalar" EntitySet="Arizalar" />
           </AssociationSet>
+          <AssociationSet Name="FK_Login_MüsteriKayıt" Association="Self.FK_Login_MüsteriKayıt">
+            <End Role="MüsteriKayıt" EntitySet="MüsteriKayıt" />
+            <End Role="Login" EntitySet="Login" />
+          </AssociationSet>
           <AssociationSet Name="FK_Malzemeler_MalzemeKategoriler" Association="Self.FK_Malzemeler_MalzemeKategoriler">
             <End Role="MalzemeKategoriler" EntitySet="MalzemeKategoriler" />
             <End Role="Malzemeler" EntitySet="Malzemeler" />
-          </AssociationSet>
-          <AssociationSet Name="FK_MüsteriYorumları_MüsteriKayıt" Association="Self.FK_MüsteriYorumları_MüsteriKayıt">
-            <End Role="MüsteriKayıt" EntitySet="MüsteriKayıt" />
-            <End Role="MüsteriYorumları" EntitySet="MüsteriYorumları" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -271,16 +270,6 @@
           <Property Name="mesaj" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="date" Type="DateTime" Precision="3" />
         </EntityType>
-        <EntityType Name="Login">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="KulAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="KulSifre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="KulMail" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Yetki" Type="Int32" />
-        </EntityType>
         <EntityType Name="MalzemeKategoriler">
           <Key>
             <PropertyRef Name="id" />
@@ -332,7 +321,6 @@
           <EntitySet Name="Galeri" EntityType="Self.Galeri" />
           <EntitySet Name="Hakkimizda" EntityType="Self.Hakkimizda" />
           <EntitySet Name="iletisim" EntityType="Self.iletisim" />
-          <EntitySet Name="Login" EntityType="Self.Login" />
           <EntitySet Name="MalzemeKategoriler" EntityType="Self.MalzemeKategoriler" />
           <EntitySet Name="Malzemeler" EntityType="Self.Malzemeler" />
           <AssociationSet Name="FK_Arizalar_ArizaKategori" Association="Self.FK_Arizalar_ArizaKategori">
@@ -348,9 +336,10 @@
           <EntitySet Name="Referanslar" EntityType="BDElektrikModel.Referanslar" />
           <EntitySet Name="MüsteriKayıt" EntityType="BDElektrikModel.MüsteriKayıt" />
           <EntitySet Name="MüsteriYorumları" EntityType="BDElektrikModel.MüsteriYorumları" />
-          <AssociationSet Name="FK_MüsteriYorumları_MüsteriKayıt" Association="BDElektrikModel.FK_MüsteriYorumları_MüsteriKayıt">
+          <EntitySet Name="Login" EntityType="BDElektrikModel.Login" />
+          <AssociationSet Name="FK_Login_MüsteriKayıt" Association="BDElektrikModel.FK_Login_MüsteriKayıt">
             <End Role="MüsteriKayıt" EntitySet="MüsteriKayıt" />
-            <End Role="MüsteriYorumları" EntitySet="MüsteriYorumları" />
+            <End Role="Login" EntitySet="Login" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="sysdiagrams">
@@ -394,7 +383,7 @@
           <Property Name="sifreOnay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="date" Type="DateTime" Precision="3" />
           <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="MüsteriYorumları" Relationship="BDElektrikModel.FK_MüsteriYorumları_MüsteriKayıt" FromRole="MüsteriKayıt" ToRole="MüsteriYorumları" />
+          <NavigationProperty Name="Login" Relationship="BDElektrikModel.FK_Login_MüsteriKayıt" FromRole="MüsteriKayıt" ToRole="Login" />
         </EntityType>
         <EntityType Name="MüsteriYorumları">
           <Key>
@@ -403,17 +392,26 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Müsteri_id" Type="Int32" Nullable="false" />
           <Property Name="Müsteri_Yorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="MüsteriKayıt" Relationship="BDElektrikModel.FK_MüsteriYorumları_MüsteriKayıt" FromRole="MüsteriYorumları" ToRole="MüsteriKayıt" />
         </EntityType>
-        <Association Name="FK_MüsteriYorumları_MüsteriKayıt">
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Yetki" Type="Int32" />
+          <Property Name="date" Type="DateTime" Precision="3" />
+          <Property Name="MüsteriFKid" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MüsteriKayıt" Relationship="BDElektrikModel.FK_Login_MüsteriKayıt" FromRole="Login" ToRole="MüsteriKayıt" />
+        </EntityType>
+        <Association Name="FK_Login_MüsteriKayıt">
           <End Type="BDElektrikModel.MüsteriKayıt" Role="MüsteriKayıt" Multiplicity="1" />
-          <End Type="BDElektrikModel.MüsteriYorumları" Role="MüsteriYorumları" Multiplicity="*" />
+          <End Type="BDElektrikModel.Login" Role="Login" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="MüsteriKayıt">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="MüsteriYorumları">
-              <PropertyRef Name="Müsteri_id" />
+            <Dependent Role="Login">
+              <PropertyRef Name="MüsteriFKid" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -488,17 +486,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Login">
-            <EntityTypeMapping TypeName="BDElektrikModel.Login">
-              <MappingFragment StoreEntitySet="Login">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="KulAdi" ColumnName="KulAdi" />
-                <ScalarProperty Name="KulSifre" ColumnName="KulSifre" />
-                <ScalarProperty Name="KulMail" ColumnName="KulMail" />
-                <ScalarProperty Name="Yetki" ColumnName="Yetki" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="MalzemeKategoriler">
             <EntityTypeMapping TypeName="BDElektrikModel.MalzemeKategoriler">
               <MappingFragment StoreEntitySet="MalzemeKategoriler">
@@ -570,6 +557,16 @@
               <MappingFragment StoreEntitySet="MüsteriYorumları">
                 <ScalarProperty Name="Müsteri_Yorum" ColumnName="Müsteri_Yorum" />
                 <ScalarProperty Name="Müsteri_id" ColumnName="Müsteri_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Login">
+            <EntityTypeMapping TypeName="BDElektrikModel.Login">
+              <MappingFragment StoreEntitySet="Login">
+                <ScalarProperty Name="MüsteriFKid" ColumnName="MüsteriFKid" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="Yetki" ColumnName="Yetki" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

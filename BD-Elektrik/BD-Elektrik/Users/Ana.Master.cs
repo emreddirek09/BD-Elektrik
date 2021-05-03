@@ -14,7 +14,8 @@ namespace BD_Elektrik.Users
         {
 
         }
-
+        Proje.DataAccess.BDElektrikEntities entities = new Proje.DataAccess.BDElektrikEntities();
+        Proje.Business.MüsteriGiris Bussines_müsteriGiris = new Proje.Business.MüsteriGiris();
         Proje.Business.MüsteriKayıt Busines_MüsteriKayıt = new Proje.Business.MüsteriKayıt();
         protected void MüsteriKayit_Click(object sender, EventArgs e)
         {
@@ -56,7 +57,22 @@ namespace BD_Elektrik.Users
 
         protected void MüsteriGiris_Click(object sender, EventArgs e)
         {
+            string KullaniciAdi = Müsteri_KulAdi_Giris.Value;
+            string KullaniciSifre = Müsteri_sifre_Giris.Value;
 
+            if (Bussines_müsteriGiris.Login(KullaniciAdi, KullaniciSifre) == true)
+            {
+                int a = Bussines_müsteriGiris.SessionKontrol();
+                Session.Add("LogUser",a);
+                Session.Timeout = 1;
+                Response.Redirect("MüşteriSayfası.aspx");
+
+            }
+            else
+            {
+                GirisLabel.Text = "Giriş Başarısız.";
+            }
+            
         }
     }
 }

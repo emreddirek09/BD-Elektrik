@@ -76,10 +76,9 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="KulAdi" Type="nvarchar(max)" />
-    <Property Name="KulSifre" Type="nvarchar(max)" />
-    <Property Name="KulMail" Type="nchar" MaxLength="10" />
     <Property Name="Yetki" Type="int" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="MüsteriFKid" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="MalzemeKategoriler">
     <Key>
@@ -149,6 +148,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Login_MüsteriKayıt">
+    <End Role="MüsteriKayıt" Type="Self.MüsteriKayıt" Multiplicity="1" />
+    <End Role="Login" Type="Self.Login" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MüsteriKayıt">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Login">
+        <PropertyRef Name="MüsteriFKid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Malzemeler_MalzemeKategoriler">
     <End Role="MalzemeKategoriler" Type="Self.MalzemeKategoriler" Multiplicity="1" />
     <End Role="Malzemeler" Type="Self.Malzemeler" Multiplicity="*" />
@@ -158,18 +169,6 @@
       </Principal>
       <Dependent Role="Malzemeler">
         <PropertyRef Name="MalzemeFK" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_MüsteriYorumları_MüsteriKayıt">
-    <End Role="MüsteriKayıt" Type="Self.MüsteriKayıt" Multiplicity="1" />
-    <End Role="MüsteriYorumları" Type="Self.MüsteriYorumları" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="MüsteriKayıt">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="MüsteriYorumları">
-        <PropertyRef Name="Müsteri_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -192,13 +191,13 @@
       <End Role="ArizaKategori" EntitySet="ArizaKategori" />
       <End Role="Arizalar" EntitySet="Arizalar" />
     </AssociationSet>
+    <AssociationSet Name="FK_Login_MüsteriKayıt" Association="Self.FK_Login_MüsteriKayıt">
+      <End Role="MüsteriKayıt" EntitySet="MüsteriKayıt" />
+      <End Role="Login" EntitySet="Login" />
+    </AssociationSet>
     <AssociationSet Name="FK_Malzemeler_MalzemeKategoriler" Association="Self.FK_Malzemeler_MalzemeKategoriler">
       <End Role="MalzemeKategoriler" EntitySet="MalzemeKategoriler" />
       <End Role="Malzemeler" EntitySet="Malzemeler" />
-    </AssociationSet>
-    <AssociationSet Name="FK_MüsteriYorumları_MüsteriKayıt" Association="Self.FK_MüsteriYorumları_MüsteriKayıt">
-      <End Role="MüsteriKayıt" EntitySet="MüsteriKayıt" />
-      <End Role="MüsteriYorumları" EntitySet="MüsteriYorumları" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

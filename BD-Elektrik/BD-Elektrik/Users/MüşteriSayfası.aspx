@@ -29,12 +29,19 @@
                                 </div>
                                 <div class="col-md-12 mb-1">
                                     <div class="form-group">
-                                        <textarea id="TextArea1"  class="form-control" placeholder="Yorumunuz" cols="45" rows="8"></textarea>
+                                        <textarea id="TextArea1" class="form-control" placeholder="Yorumunuz" cols="45" rows="8"></textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <asp:Button ID="YorumGönder" OnClick="YorumGönder_Click" class="btn btn-a" runat="server" Text="Gönder" />
+                                <div class="col-md-12"> 
+                                    <asp:Button ID="YorumGönder" OnClick="YorumGönder_Click" CssClass="fa fa-send" runat="server" Text="Button" />   
+                                    <asp:Button ID="cikis" OnClick="cikis_Click" CssClass="fa fa-send" runat="server" Text="Button" />    
                                     
+                                    <%--<button id="YorumGönder" class="btn btn-b-n" type="button" onclick="YorumGönder_Click">
+                                        <span class="fa fa-send" aria-hidden="true"></span> Gönder
+                                    </button>
+                                    <button id="cikis" class="btn btn-danger" type="button" onclick="cikis_Click">
+                                        <span class="fa fa-close" aria-hidden="true">ÇIKIŞ</span> 
+                                    </button>--%>
                                 </div>
                             </div>
                         </div>
