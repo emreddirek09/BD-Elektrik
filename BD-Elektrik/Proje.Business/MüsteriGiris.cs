@@ -44,12 +44,12 @@ namespace Proje.Business
 
             return kontrol;
         }
-        public string LoginInsert()
+        public List<Proje.DataAccess.Login> Listele()
         {
+            var sonuc = entities.Login.ToList();
 
-
-            return "1";
+            return sonuc;
         }
-        
+
     }
 }

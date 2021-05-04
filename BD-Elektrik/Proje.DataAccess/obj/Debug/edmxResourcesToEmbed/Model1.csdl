@@ -183,6 +183,7 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Müsteri_id" Type="Int32" Nullable="false" />
     <Property Name="Müsteri_Yorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="date" Type="DateTime" Precision="3" />
   </EntityType>
   <EntityType Name="Login">
     <Key>

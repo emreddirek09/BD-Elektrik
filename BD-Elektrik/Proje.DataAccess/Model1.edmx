@@ -122,6 +122,7 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Müsteri_id" Type="int" Nullable="false" />
           <Property Name="Müsteri_Yorum" Type="nvarchar(max)" />
+          <Property Name="date" Type="datetime" />
         </EntityType>
         <EntityType Name="Referanslar">
           <Key>
@@ -392,6 +393,7 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Müsteri_id" Type="Int32" Nullable="false" />
           <Property Name="Müsteri_Yorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="date" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Login">
           <Key>
@@ -555,6 +557,7 @@
           <EntitySetMapping Name="MüsteriYorumları">
             <EntityTypeMapping TypeName="BDElektrikModel.MüsteriYorumları">
               <MappingFragment StoreEntitySet="MüsteriYorumları">
+                <ScalarProperty Name="date" ColumnName="date" />
                 <ScalarProperty Name="Müsteri_Yorum" ColumnName="Müsteri_Yorum" />
                 <ScalarProperty Name="Müsteri_id" ColumnName="Müsteri_id" />
                 <ScalarProperty Name="id" ColumnName="id" />

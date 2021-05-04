@@ -41,5 +41,11 @@ namespace Proje.Business
             int count = entities.MüsteriKayıt.Count();
             return count;
         }
+        public List<Proje.DataAccess.MüsteriKayıt> Listele()
+        {
+            var sonuc = entities.MüsteriKayıt.ToList();
+
+            return sonuc;
+        }
     }
 }

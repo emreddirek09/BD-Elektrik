@@ -135,6 +135,7 @@
     <EntitySetMapping Name="MüsteriYorumları">
       <EntityTypeMapping TypeName="BDElektrikModel.MüsteriYorumları">
         <MappingFragment StoreEntitySet="MüsteriYorumları">
+          <ScalarProperty Name="date" ColumnName="date" />
           <ScalarProperty Name="Müsteri_Yorum" ColumnName="Müsteri_Yorum" />
           <ScalarProperty Name="Müsteri_id" ColumnName="Müsteri_id" />
           <ScalarProperty Name="id" ColumnName="id" />

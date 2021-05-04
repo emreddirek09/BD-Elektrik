@@ -143,6 +143,9 @@
     <Content Include="Admin\HakkimizdakiBilgiler.aspx" />
     <Content Include="Admin\Galeri.aspx" />
     <Content Include="Admin\Müsteri_iletisim.aspx" />
+    <Content Include="Admin\Girisler.aspx" />
+    <Content Include="Admin\Kayitlar.aspx" />
+    <Content Include="Admin\Yorumlar.aspx" />
     <Content Include="Admin\WebServiceDeneme.aspx" />
     <Content Include="Admin\İletisimBilgileri.aspx" />
     <None Include="Connected Services\WSDLServisAdDeneme\configuration91.svcinfo" />
@@ -301,6 +304,27 @@
     </Compile>
     <Compile Include="Admin\Müsteri_iletisim.aspx.designer.cs">
       <DependentUpon>Müsteri_iletisim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\WebForm10.aspx.cs">
+      <DependentUpon>Girisler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\WebForm10.aspx.designer.cs">
+      <DependentUpon>Girisler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Kayitlar.aspx.cs">
+      <DependentUpon>Kayitlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Kayitlar.aspx.designer.cs">
+      <DependentUpon>Kayitlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Yorumlar.aspx.cs">
+      <DependentUpon>Yorumlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Yorumlar.aspx.designer.cs">
+      <DependentUpon>Yorumlar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\WebServiceDeneme.aspx.cs">
       <DependentUpon>WebServiceDeneme.aspx</DependentUpon>

@@ -17,5 +17,6 @@ namespace Proje.DataAccess
         public int id { get; set; }
         public int Müsteri_id { get; set; }
         public string Müsteri_Yorum { get; set; }
+        public Nullable<System.DateTime> date { get; set; }
     }
 }

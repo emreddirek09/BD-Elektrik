@@ -26,15 +26,16 @@
                             <div class="row">
                                 <div class="col-md-12 mb-1 text-center">
                                     <h4 class="title-agent">Emre Direk </h4>
+                                    <asp:Label ID="Label1" runat="server"></asp:Label>
                                 </div>
                                 <div class="col-md-12 mb-1">
                                     <div class="form-group">
-                                        <textarea id="TextArea1" class="form-control" placeholder="Yorumunuz" cols="45" rows="8"></textarea>
+                                        <textarea id="TextArea1" runat="server" class="form-control" placeholder="Yorumunuz" cols="45" rows="8"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12"> 
-                                    <asp:Button ID="YorumGönder" OnClick="YorumGönder_Click" CssClass="fa fa-send" runat="server" Text="Button" />   
-                                    <asp:Button ID="cikis" OnClick="cikis_Click" CssClass="fa fa-send" runat="server" Text="Button" />    
+                                    <asp:Button ID="YorumGönder" class="btn btn-success" OnClick="YorumGönder_Click1" runat="server" Text="Yorum Gönder" />   
+                                    <asp:Button ID="cikis" OnClick="cikis_Click1" class="btn btn-danger" runat="server" Text="Çıkış Yap" />    
                                     
                                     <%--<button id="YorumGönder" class="btn btn-b-n" type="button" onclick="YorumGönder_Click">
                                         <span class="fa fa-send" aria-hidden="true"></span> Gönder

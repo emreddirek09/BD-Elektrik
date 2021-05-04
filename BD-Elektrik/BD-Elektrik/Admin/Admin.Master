@@ -38,15 +38,21 @@
                     <li>
                         <a href="Galeri.aspx"><i class="menu-icon ti-email"></i>Galeri </a>
                     </li>
-                    <%--<li>
-                        <a href="#"><i class="menu-icon ti-email"></i>Blog </a>
-                    </li>--%>
+                    
                     <li>
                         <a href="HakkimizdakiBilgiler.aspx"><i class="menu-icon ti-email"></i>Hakkımızda </a>
                     </li>
                     <li>
                         <a href="ReferansEkle.aspx"><i class="menu-icon ti-rocket"></i>Referanslar</a>
-                    </li>                   
+                    </li>   
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-tasks"></i>Müsteriler</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="Kayitlar.aspx">Müşteriler</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="Girisler.aspx">Sistem Girişleri</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="Yorumlar.aspx">Gelen Yorumlar</a></li>
+                        </ul>
+                    </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-tasks"></i>Arızalar</a>
                         <ul class="sub-menu children dropdown-menu">

@@ -9,19 +9,26 @@ namespace BD_Elektrik.Users
 {
     public partial class WebForm9 : System.Web.UI.Page
     {
+        string girisYapan;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            girisYapan = Session["LogUser"].ToString();
         }
 
-        protected void YorumGönder_Click(object sender, EventArgs e)
+        Proje.Business.MüsteriYorumlari müsteriYorumlariNesne = new Proje.Business.MüsteriYorumlari();
+        protected void YorumGönder_Click1(object sender, EventArgs e)
         {
 
+            müsteriYorumlariNesne.YorumEkle( Convert.ToInt32(girisYapan), TextArea1.Value);
+            TextArea1.Value = "";
+            Label1.Text = "Yorum Eklemesi Başarılı.";           
         }
-        protected void cikis_Click(object sender, EventArgs e)
+
+        protected void cikis_Click1(object sender, EventArgs e)
         {
-            Session.Clear();
+            Session.Abandon();
             Response.Redirect("Default.aspx");
+
         }
     }
 }

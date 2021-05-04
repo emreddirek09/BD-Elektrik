@@ -117,6 +117,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Müsteri_id" Type="int" Nullable="false" />
     <Property Name="Müsteri_Yorum" Type="nvarchar(max)" />
+    <Property Name="date" Type="datetime" />
   </EntityType>
   <EntityType Name="Referanslar">
     <Key>

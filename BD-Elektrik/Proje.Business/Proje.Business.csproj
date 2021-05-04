@@ -67,6 +67,7 @@
     <Compile Include="ArizaKategori.cs" />
     <Compile Include="MüsteriGiris.cs" />
     <Compile Include="MüsteriKayıt.cs" />
+    <Compile Include="MüsteriYorumlari.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Referanslar.cs" />
     <Compile Include="WebServisDeneme.cs" />
