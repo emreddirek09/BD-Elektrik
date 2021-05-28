@@ -486,9 +486,11 @@
   <ItemGroup>
     <Folder Include="Admin\img\Arizalar\" />
     <Folder Include="Admin\img\Galeri\" />
+    <Folder Include="Admin\img\Hakkimizda\" />
     <Folder Include="Admin\img\Malzemeler\" />
     <Folder Include="Admin\img\Müsteri\" />
     <Folder Include="Admin\img\Referanslar\" />
+    <Folder Include="Admin\img\Slider\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

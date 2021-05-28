@@ -34,11 +34,9 @@ namespace Proje.Business
             return sonuc.FirstOrDefault();
         }        
         public List<Proje.DataAccess.Malzemeler> Listele()
-
         {
             Proje.DataAccess.BDElektrikEntities ent = new DataAccess.BDElektrikEntities();
-            ent.Database.Connection.Open();
-            var sonuc = ent.Malzemeler.ToList();  //Malzemeler tablosundaki tüm datayı çekiyor.
+            var sonuc = ent.Malzemeler.ToList();
             return sonuc;
         }
         public Proje.DataAccess.Malzemeler GetByMalzemeler(string ÜrünAdi)

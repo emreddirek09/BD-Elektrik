@@ -11,7 +11,14 @@ namespace BD_Elektrik.Users
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Malzemeler();
+        }
+        protected void Malzemeler()
+        {
+            Proje.Business.Malzemeler malzemeler = new Proje.Business.Malzemeler();
+            var liste = malzemeler.Listele();
+            Repeater1.DataSource = liste;
+            Repeater1.DataBind();
         }
     }
 }

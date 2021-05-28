@@ -28,7 +28,7 @@ namespace BD_Elektrik.Admin
                     filename = Path.GetFileName(Resim.FileName);
                     if (filename != "")
                     {
-                        Resim.SaveAs(Server.MapPath("img/Referanslar/") + filename);
+                        Resim.SaveAs(Server.MapPath("../Admin/img/Referanslar/") + filename);
                         HiddenFieldResim.Value = filename;
                     }
 
@@ -40,7 +40,7 @@ namespace BD_Elektrik.Admin
                 }
             }
             RefAdi = txt_Ref.Value;
-            RefResim = "img /Referanslar/" + HiddenFieldResim.Value;
+            RefResim = "../Admin/img/Referanslar/" + HiddenFieldResim.Value;
             Busines_referanslar.ReferansEkle(RefAdi, RefResim);
             Label2.Text = "Ekleme Başarılı";
 

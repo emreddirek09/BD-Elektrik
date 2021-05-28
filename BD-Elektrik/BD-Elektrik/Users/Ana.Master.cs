@@ -64,7 +64,12 @@ namespace BD_Elektrik.Users
             {
                 int a = Bussines_müsteriGiris.SessionKontrol();
                 Session.Add("LogUser",a);
-                Session.Timeout = 1;
+                string isim = Bussines_müsteriGiris.Sessionisim();
+                Session.Add("SessionIsim", isim);
+                string Resim = Bussines_müsteriGiris.SessionResim();
+                Session.Add("SessionResim", Resim);
+
+                //Session.Timeout = 1;
                 Response.Redirect("MüşteriSayfası.aspx");
 
             }

@@ -27,5 +27,11 @@ namespace Proje.Business
 
             return "1";
         }
+        public List<Proje.DataAccess.Galeri> Listele()
+        {
+            var sonuc = entities.Galeri.ToList();
+            return sonuc;
+
+        }
     }
 }

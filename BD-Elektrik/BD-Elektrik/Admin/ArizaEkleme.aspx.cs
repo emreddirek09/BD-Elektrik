@@ -56,7 +56,7 @@ namespace BD_Elektrik.Admin
                     filename = Path.GetFileName(Resim.FileName);
                     if (filename != "")
                     {
-                        Resim.SaveAs(Server.MapPath("img/Arizalar/") + filename);
+                        Resim.SaveAs(Server.MapPath("../Admin/img/Arizalar/") + filename);
                         HiddenFieldResim.Value = filename;
                     }
 
@@ -70,7 +70,7 @@ namespace BD_Elektrik.Admin
             id = DropDownListKategori.SelectedIndex;
             ad = txt_ArizaAdi.Value;
             icerik = txt_Arizaicerik.Value;
-            resim= "img/Arizalar/" + HiddenFieldResim.Value;
+            resim= "../Admin/img/Arizalar/" + HiddenFieldResim.Value;
             Nesne_arizalar.ArizaEkle(id, ad, icerik, resim);
             Listele();
 

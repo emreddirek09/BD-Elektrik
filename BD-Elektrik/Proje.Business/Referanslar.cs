@@ -23,5 +23,10 @@ namespace Proje.Business
 
             return "1";
         }
+        public List<Proje.DataAccess.Referanslar> Listele()
+        {
+            var sonuc = entities.Referanslar.ToList();
+            return sonuc;
+        }
     }
 }

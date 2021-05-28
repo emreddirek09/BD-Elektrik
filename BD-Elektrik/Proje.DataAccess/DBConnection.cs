@@ -11,9 +11,9 @@ namespace WebProje.DataAccess
     {
         public SqlConnection Baglan()
         {
-            //database bağlantı komutumuz
-            SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-J9OEKO6;Initial Catalog=BDElektrik Integrated Security=True");
-            return baglanti;
+            SqlConnection sqlConnection = new SqlConnection("Server=DESKTOP-J9OEKO6; Database=BDElektrik; Integrated Security=True");
+            sqlConnection.Open();
+            return sqlConnection;
         }
     }
 }

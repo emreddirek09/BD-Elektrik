@@ -33,60 +33,25 @@
                                 <div class="carousel-item-a">
                                     <div class="testimonials-box">
                                         <div class="row">
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="testimonial-img">
-                                                    <img src="assets/img/testimonial-1.jpg" alt="" class="img-fluid">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="testimonial-ico">
-                                                    <span class="ion-ios-quote"></span>
-                                                </div>
-                                                <div class="testimonials-content">
-                                                    <p class="testimonial-text">
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                      debitis hic ber quibusdam
-                      voluptatibus officia expedita corpori.
-                                                    </p>
-                                                </div>
-                                                <div class="testimonial-author-box">
-                                                    <img src="assets/img/mini-testimonial-1.jpg" alt="" class="testimonial-avatar">
-                                                    <h5 class="testimonial-author">Albert &amp; Erika</h5>
-                                                </div>
-                                            </div>
+                                            <asp:Repeater ID="Repeater3" runat="server">
+                                                <ItemTemplate>                                                    
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <div class="testimonials-content">
+                                                            <p class="testimonial-text">
+                                                                <%#Eval("Müsteri_Yorum")%>
+                                                            </p>
+                                                        </div>
+                                                        <div class="testimonial-author-box">
+                                                            <img src="<%#Eval("Resim")%>" alt="" class="testimonial-avatar">
+                                                            <h5 class="testimonial-author"><%#Eval("isim")%></h5>
+                                                        </div>
+                                                    </div>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <%--<div class="owl-item animated owl-animated-in fadeInUp active" style="width: 1110px;">
-                                <div class="carousel-item-a">
-                                    <div class="testimonials-box">
-                                        <div class="row">
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="testimonial-img">
-                                                    <img src="assets/img/testimonial-2.jpg" alt="" class="img-fluid">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12 col-md-6">
-                                                <div class="testimonial-ico">
-                                                    <span class="ion-ios-quote"></span>
-                                                </div>
-                                                <div class="testimonials-content">
-                                                    <p class="testimonial-text">
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cupiditate ea nam praesentium
-                      debitis hic ber quibusdam
-                      voluptatibus officia expedita corpori.
-                                                    </p>
-                                                </div>
-                                                <div class="testimonial-author-box">
-                                                    <img src="assets/img/mini-testimonial-2.jpg" alt="" class="testimonial-avatar">
-                                                    <h5 class="testimonial-author">Pablo &amp; Emma</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>--%>
                         </div>
                     </div>
                 </div>

@@ -11,7 +11,11 @@ namespace BD_Elektrik.Users
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Proje.Business.Galeri galeri = new Proje.Business.Galeri();
+            var liste = galeri.Listele();
+            Repeater2.DataSource = liste;
+            Repeater2.DataBind();
         }
+
     }
 }

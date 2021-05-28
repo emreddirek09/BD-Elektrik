@@ -67,7 +67,7 @@ namespace BD_Elektrik.Admin
                     filename = Path.GetFileName(Resim.FileName);
                     if (filename != "")
                     {
-                        Resim.SaveAs(Server.MapPath("img/Malzemeler/") + filename);
+                        Resim.SaveAs(Server.MapPath("../Admin/img/Malzemeler/") + filename);
                         HiddenFieldResim.Value = filename;
                     }
 
@@ -81,7 +81,7 @@ namespace BD_Elektrik.Admin
             secilen = DropDownListKategori.SelectedIndex;
             ürünAdi = txt_ürünAdi.Value;
             ürünAciklama = txt_ürünAciklama.Value;
-            ürünResim = "img / Malzemeler/" + HiddenFieldResim.Value;
+            ürünResim = "../Admin/img/Malzemeler/" + HiddenFieldResim.Value;
             ürünFiyat = Convert.ToInt32(txt_ürünFiyat.Value);
             var deger = nesne.MalzemeEkle(secilen, ürünAdi, ürünAciklama, ürünFiyat, ürünResim);
 

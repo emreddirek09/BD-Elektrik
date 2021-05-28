@@ -11,7 +11,10 @@ namespace BD_Elektrik.Users
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Proje.Business.Arizalar arizalar = new Proje.Business.Arizalar();
+            var liste = arizalar.ArizaListele();
+            Repeater2.DataSource = liste;
+            Repeater2.DataBind();
         }
     }
 }

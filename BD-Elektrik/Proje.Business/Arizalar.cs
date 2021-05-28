@@ -36,7 +36,6 @@ namespace Proje.Business
         public List<Proje.DataAccess.Arizalar> ArizaListele()
         {
            var sonuc = entities.Arizalar.ToList();
-
             return sonuc;
 
         }

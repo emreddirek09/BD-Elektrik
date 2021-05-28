@@ -29,20 +29,20 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="about-img-box">
-                            <img src="assets/img/slide-about-1.jpg" alt="" class="img-fluid">
+                            <img src="../Admin/img/Hakkimizda/1.jpg" alt="" class="img-fluid">
                         </div>
-                        <div class="sinse-box">
+                        <%--<div class="sinse-box">
                             <h3 class="sinse-title">Dekarasyon                
                                 <br>
                                 25 EYLÜL 2020
-                            </h3>
+                            </h3><a href="../Admin/img/Hakkimizda/">../Admin/img/Hakkimizda/</a>
                             
-                        </div>
+                        </div>--%>
                     </div>
                     <div class="col-md-12 section-t8">
                         <div class="row">
                             <div class="col-md-6 col-lg-5">
-                                <img src="assets/img/about-2.jpg" alt="" class="img-fluid">
+                                <img src="../Admin/img/Hakkimizda/2.jpg" alt="" class="img-fluid">
                             </div>
                             <div class="col-lg-2  d-none d-lg-block">
                                 <div class="title-vertical d-flex justify-content-start">

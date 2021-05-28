@@ -26,7 +26,7 @@ namespace BD_Elektrik.Admin
                     filename = Path.GetFileName(Resim.FileName);
                     if (filename != "")
                     {
-                        Resim.SaveAs(Server.MapPath("img/Galeri/") + filename);
+                        Resim.SaveAs(Server.MapPath("../Admin/img/Galeri/") + filename);
                         HiddenFieldResim.Value = filename;
                     }
 
@@ -39,7 +39,7 @@ namespace BD_Elektrik.Admin
             }
             string GaleriBaslik = txt_Baslik.Value;
             string GaleriYazi = txt_Yazi.Value;
-            string resim = "img/Galeri/" + HiddenFieldResim.Value;
+            string resim = "../Admin/img/Galeri/" + HiddenFieldResim.Value;
             galeriBussines.GaleriEkle(GaleriBaslik, GaleriYazi, resim);
             Label1.Text = "Kategori Ekleme Başarılı";
             

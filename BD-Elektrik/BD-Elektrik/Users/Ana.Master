@@ -72,7 +72,7 @@
                     <div class="row">
                         <div class="col-md-12 mb-2">
                             <div class="form-group">
-                                <label for="Type">Kullanıcı Adı</label>
+                                <label for="Type">Mail</label>
                                 <input id="Müsteri_KulAdi_Giris" runat="server" type="text" class="form-control form-control-lg form-control-a" placeholder="Mail">
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                         </div>
                         <div class="col-md-6 mb-2">
                             <div class="form-group">
-                                <label for="Type">Kullanıcı Adı</label>
+                                <label for="Type">Mail</label>
                                 <input type="text" id="Müsteri_mail" runat="server" class="form-control form-control-lg form-control-a" placeholder="Mail">
                             </div>
                         </div>

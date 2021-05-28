@@ -27,7 +27,6 @@ namespace Proje.Business
         public List<Proje.DataAccess.MüsteriYorumları> Listele()
         {
             var sonuc = entities.MüsteriYorumları.ToList();
-
             return sonuc;
         }
     }

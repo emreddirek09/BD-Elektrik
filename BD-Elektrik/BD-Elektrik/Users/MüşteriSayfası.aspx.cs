@@ -13,6 +13,9 @@ namespace BD_Elektrik.Users
         protected void Page_Load(object sender, EventArgs e)
         {
             girisYapan = Session["LogUser"].ToString();
+
+            isim.Text = Session["SessionIsim"].ToString();
+            resim.Src = Session["SessionResim"].ToString();
         }
 
         Proje.Business.MüsteriYorumlari müsteriYorumlariNesne = new Proje.Business.MüsteriYorumlari();
