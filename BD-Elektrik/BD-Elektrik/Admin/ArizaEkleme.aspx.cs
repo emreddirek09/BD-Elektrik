@@ -21,6 +21,12 @@ namespace BD_Elektrik.Admin
             }           
             
         }   
+        private void Sil()
+        {
+            int id = Convert.ToInt32(Katid.Value);
+            Nesne_arizalar.VeriSil(id);
+            Label3.Text = "Silme Başarılı";
+        }
         private void verigetir()
         {
             for (int i = 1; i <= arizaKategoriBussines.ArizaKategoriCount(); i++)
@@ -38,7 +44,8 @@ namespace BD_Elektrik.Admin
             KatIsim = txt_Kategori.Value;
             arizaKategoriBussines.ArizaKatEkle(KatIsim);
             Label1.Text = "Kategori Ekleme Başarılı";           
-            txt_Kategori.Value = "";           
+            txt_Kategori.Value = "";      
+            
 
         }
 
@@ -73,6 +80,10 @@ namespace BD_Elektrik.Admin
             resim= "../Admin/img/Arizalar/" + HiddenFieldResim.Value;
             Nesne_arizalar.ArizaEkle(id, ad, icerik, resim);
             Listele();
+            DropDownListKategori.SelectedValue = "-1";
+            txt_ArizaAdi.Value = "";
+            txt_Arizaicerik.Value = "";
+
 
         }
         private void Listele()
@@ -81,5 +92,11 @@ namespace BD_Elektrik.Admin
             GridView1.DataBind();
         }
 
+        protected void sil_Click(object sender, EventArgs e)
+        {
+            Sil();
+            Listele();
+            Katid.Value = "";
+        }
     }
 }

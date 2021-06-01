@@ -18,14 +18,14 @@
                         <div class="form-actions form-group">
                             <asp:Button ID="Ekle" runat="server" OnClick="Ekle_Click" class="btn btn-primary btn-sm" Text="Ekle" />
                         </div>
-                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="Label1" runat="server" ></asp:Label>
                     </div>
-                </div>
+                </div>               
             </div>
             <div class="col-lg-3">
             </div>
         </div>
-    </div>
+    </div>    
     <div class="animated fadeIn">
         <div class="row text-center">
             <div class="col-lg-2">
@@ -70,16 +70,40 @@
                         <div class="form-actions form-group">
                             <asp:Button ID="ArizaEkle" OnClick="ArizaEkle_Click" runat="server" class="btn btn-primary btn-sm" Text="Arıza Ekle" />
                         </div>
-                        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="Label2" runat="server"></asp:Label>
                     </div>
+                     <asp:GridView CssClass="container" ID="GridView1" runat="server"></asp:GridView>
                 </div>
             </div>
             <div class="col-lg-2">
                 
             </div>
-            <div class="col-lg-12">
-                <asp:GridView ID="GridView1" runat="server"></asp:GridView>
-            </div>            
+                       
+        </div>
+    </div>
+    <div class="animated fadeIn">
+        <div class="row text-center">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Arıza Sil</strong>
+                    </div>
+                    <div class="card-body card-block">
+                        <div class="has-success form-group">
+                            <label for="inputIsValid" class=" form-control-label">Kategori id</label>
+                            <input type="text" id="Katid" runat="server" class="is-valid form-control-success form-control">
+                        </div>
+                        <div class="form-actions form-group">
+                            <asp:Button ID="sil" OnClick="sil_Click" runat="server" class="btn btn-primary btn-sm" Text="Sil" />
+                        </div>
+                        <asp:Label ID="Label3" runat="server"></asp:Label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+            </div>
         </div>
     </div>
 </asp:Content>

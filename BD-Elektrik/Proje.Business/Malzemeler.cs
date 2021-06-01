@@ -45,5 +45,15 @@ namespace Proje.Business
             var sonuc = ent.Malzemeler.Where(p=>p.ÜrünAdi==ÜrünAdi);
             return sonuc.FirstOrDefault();
         }
+        public int VeriSil(int i)
+        {
+            Proje.DataAccess.BDElektrikEntities ent = new DataAccess.BDElektrikEntities();
+            var stud = (from s1 in ent.Malzemeler
+                        where s1.id == i
+                        select s1).SingleOrDefault();
+            ent.Malzemeler.Remove(stud);
+            ent.SaveChanges();
+            return 1;
+        }
     }
 }

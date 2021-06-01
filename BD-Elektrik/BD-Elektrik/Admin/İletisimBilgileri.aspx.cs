@@ -18,6 +18,7 @@ namespace BD_Elektrik.Admin
             
         }
         Proje.Business.İletisimBilgileri NesneiletisimBilgileri = new Proje.Business.İletisimBilgileri();
+        Proje.DataAccess.İletisimBilgileri iletisimBilgileriData = new Proje.DataAccess.İletisimBilgileri();
 
         private void Listele()
         {
@@ -35,9 +36,18 @@ namespace BD_Elektrik.Admin
             instagram = txt_insta.Value;
             facebook = txt_face.Value;
             whatsapp = txt_wp.Value;
-            NesneiletisimBilgileri.İletisimBilgileriEkle(mail, telefon, konum, instagram, facebook, whatsapp);
-            Label2.Text = "Ekleme Başarılı";
-            Listele();
+            if (iletisimBilgileriData.konum =="")
+            {
+                NesneiletisimBilgileri.İletisimBilgileriEkle(mail, telefon, konum, instagram, facebook, whatsapp);
+                Label2.Text = "Ekleme Başarılı";
+                Listele();
+            }
+            else
+            {
+                Label2.Text = "Mevcut İçerik Varken Ekleme Yapamazsınız. Güncelleme adımlarını takip ediniz.";
+            }
+           
         }
+
     }
 }

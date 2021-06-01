@@ -155,48 +155,6 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Users\assets\css\style.css" />
-    <Content Include="Users\assets\img\about-1.jpg" />
-    <Content Include="Users\assets\img\about-2.jpg" />
-    <Content Include="Users\assets\img\agent-1.jpg" />
-    <Content Include="Users\assets\img\agent-2.jpg" />
-    <Content Include="Users\assets\img\agent-3.jpg" />
-    <Content Include="Users\assets\img\agent-4.jpg" />
-    <Content Include="Users\assets\img\agent-5.jpg" />
-    <Content Include="Users\assets\img\agent-6.jpg" />
-    <Content Include="Users\assets\img\agent-7.jpg" />
-    <Content Include="Users\assets\img\apple-touch-icon.png" />
-    <Content Include="Users\assets\img\author-1.jpg" />
-    <Content Include="Users\assets\img\author-2.jpg" />
-    <Content Include="Users\assets\img\favicon.png" />
-    <Content Include="Users\assets\img\hakkimiz.jpg" />
-    <Content Include="Users\assets\img\mini-testimonial-1.jpg" />
-    <Content Include="Users\assets\img\mini-testimonial-2.jpg" />
-    <Content Include="Users\assets\img\plan2.jpg" />
-    <Content Include="Users\assets\img\post-1.jpg" />
-    <Content Include="Users\assets\img\post-2.jpg" />
-    <Content Include="Users\assets\img\post-3.jpg" />
-    <Content Include="Users\assets\img\post-4.jpg" />
-    <Content Include="Users\assets\img\post-5.jpg" />
-    <Content Include="Users\assets\img\post-6.jpg" />
-    <Content Include="Users\assets\img\post-7.jpg" />
-    <Content Include="Users\assets\img\post-single-1.jpg" />
-    <Content Include="Users\assets\img\post-single-2.jpg" />
-    <Content Include="Users\assets\img\property-1.jpg" />
-    <Content Include="Users\assets\img\property-10.jpg" />
-    <Content Include="Users\assets\img\property-2.jpg" />
-    <Content Include="Users\assets\img\property-3.jpg" />
-    <Content Include="Users\assets\img\property-4.jpg" />
-    <Content Include="Users\assets\img\property-5.jpg" />
-    <Content Include="Users\assets\img\property-6.jpg" />
-    <Content Include="Users\assets\img\property-7.jpg" />
-    <Content Include="Users\assets\img\property-8.jpg" />
-    <Content Include="Users\assets\img\property-9.jpg" />
-    <Content Include="Users\assets\img\slide-1.jpg" />
-    <Content Include="Users\assets\img\slide-2.jpg" />
-    <Content Include="Users\assets\img\slide-3.jpg" />
-    <Content Include="Users\assets\img\slide-about-1.jpg" />
-    <Content Include="Users\assets\img\testimonial-1.jpg" />
-    <Content Include="Users\assets\img\testimonial-2.jpg" />
     <Content Include="Users\assets\js\main.js" />
     <Content Include="Users\assets\vendor\animate.css\animate.compat.css" />
     <Content Include="Users\assets\vendor\animate.css\animate.css" />
@@ -244,6 +202,7 @@
     <Content Include="Users\Ariza.aspx" />
     <Content Include="Users\MüsteriYorumlari.aspx" />
     <Content Include="Users\MüşteriSayfası.aspx" />
+    <Content Include="Users\ElektrikMalzemeleriDetay.aspx" />
     <Content Include="WCFservice\WcfService.svc" />
     <Content Include="Web.config" />
     <Content Include="WebServis\WebService1.asmx" />
@@ -415,6 +374,13 @@
     </Compile>
     <Compile Include="Users\MüşteriSayfası.aspx.designer.cs">
       <DependentUpon>MüşteriSayfası.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ElektrikMalzemeleriDetay.aspx.cs">
+      <DependentUpon>ElektrikMalzemeleriDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\ElektrikMalzemeleriDetay.aspx.designer.cs">
+      <DependentUpon>ElektrikMalzemeleriDetay.aspx</DependentUpon>
     </Compile>
     <Compile Include="WCFservice\IWcfService.cs" />
     <Compile Include="WCFservice\WcfService.svc.cs">

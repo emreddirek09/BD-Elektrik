@@ -19,13 +19,15 @@
                             <asp:Button ID="Ekle" runat="server" OnClick="Ekle_Click" class="btn btn-primary btn-sm" Text="Ekle" />
 
                         </div>
-                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="Label1" runat="server"></asp:Label>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3">
             </div>
         </div>
+         <asp:GridView ID="GridView1" CssClass="container" runat="server"></asp:GridView>
     </div>
+
 
 </asp:Content>

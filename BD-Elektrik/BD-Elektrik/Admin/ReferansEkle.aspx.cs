@@ -9,13 +9,19 @@ using System.Web.UI.WebControls;
 namespace BD_Elektrik.Admin
 {
     public partial class WebForm5 : System.Web.UI.Page
-    {
+    { 
+        Proje.Business.Referanslar Busines_referanslar = new Proje.Business.Referanslar();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Listele();
         }
         //Proje.DataAccess.Referanslar Nesne_referanslar = new Proje.DataAccess.Referanslar();
-        Proje.Business.Referanslar Busines_referanslar = new Proje.Business.Referanslar();
+       
+        protected void Listele()
+        {
+            GridView1.DataSource = Busines_referanslar.Listele();
+            GridView1.DataBind();
+        }
         protected void Ekle_Click(object sender, EventArgs e)
         {
             string RefAdi,RefResim;
@@ -43,7 +49,19 @@ namespace BD_Elektrik.Admin
             RefResim = "../Admin/img/Referanslar/" + HiddenFieldResim.Value;
             Busines_referanslar.ReferansEkle(RefAdi, RefResim);
             Label2.Text = "Ekleme Başarılı";
+            Listele();
+            txt_Ref.Value = "";
 
+
+        }
+
+        protected void sil_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(Katid.Value);
+            Busines_referanslar.VeriSil(id);
+            Label3.Text = "Silme Başarılı";
+            Listele();
+            Katid.Value = "";
         }
     }
 }

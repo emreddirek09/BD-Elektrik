@@ -129,8 +129,7 @@
                                             <div class="price-box d-flex">
                                                 <span class="price-a"><%#Eval("Fiyat")%></span>
                                             </div>
-                                            <a href="property-single.html" class="link-a">Click here to view
-                      <span class="ion-ios-arrow-forward"></span>
+                                            <asp:LinkButton ID="LinkButton1" runat="server">İncele</asp:LinkButton>                                            
                                             </a>
                                         </div>
                                     </div>

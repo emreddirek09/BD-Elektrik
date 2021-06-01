@@ -13,7 +13,9 @@ namespace BD_Elektrik.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           // Label1.Text = nesne.MalzemeKategoriCount().ToString();
+            // Label1.Text = nesne.MalzemeKategoriCount().ToString();
+            GridView1.DataSource = nesne.Listele();
+            GridView1.DataBind();
         }
 
         protected void Ekle_Click(object sender, EventArgs e)
@@ -21,7 +23,8 @@ namespace BD_Elektrik.Admin
             string KatAdi;            
             KatAdi = txt_Kategori.Value;
             var deger = nesne.MalzemeKategoriEkle(KatAdi);
-            //Label1.Text = deger;            
+            //Label1.Text = deger;
+            txt_Kategori.Value = "";
         }
     }
 }

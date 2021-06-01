@@ -29,5 +29,14 @@ namespace Proje.Business
             var sonuc = entities.MüsteriYorumları.ToList();
             return sonuc;
         }
+        public int VeriSil(int i)
+        {
+            var stud = (from s1 in entities.MüsteriYorumları
+                        where s1.id == i
+                        select s1).SingleOrDefault();
+            entities.MüsteriYorumları.Remove(stud);
+            entities.SaveChanges();
+            return 1;
+        }
     }
 }

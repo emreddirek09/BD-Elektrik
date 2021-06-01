@@ -28,5 +28,14 @@ namespace Proje.Business
             var sonuc = entities.Referanslar.ToList();
             return sonuc;
         }
+        public int VeriSil(int i)
+        {
+            var stud = (from s1 in entities.Referanslar
+                        where s1.id == i
+                        select s1).SingleOrDefault();
+            entities.Referanslar.Remove(stud);
+            entities.SaveChanges();
+            return 1;
+        }
     }
 }

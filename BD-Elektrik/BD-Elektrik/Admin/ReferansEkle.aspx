@@ -28,9 +28,9 @@
                             </div>                                                      
                         </div>
                         <div class="form-actions form-group">
-                            <asp:Button ID="Ekle" OnClick="Ekle_Click" runat="server" class="btn btn-primary btn-sm" Text="Arıza Ekle" />
+                            <asp:Button ID="Ekle" OnClick="Ekle_Click" runat="server" class="btn btn-primary btn-sm" Text="Ekle" />
                         </div>
-                        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                        <asp:Label ID="Label2" runat="server" ></asp:Label>
                     </div>
                 </div>
             </div>
@@ -38,8 +38,33 @@
                 
             </div>
             <div class="col-lg-12">
-                <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+                <asp:GridView ID="GridView1" CssClass="container" runat="server"></asp:GridView>
             </div>            
+        </div>
+    </div>
+    <div class="animated fadeIn">
+        <div class="row text-center">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Referans Sil</strong>
+                    </div>
+                    <div class="card-body card-block">
+                        <div class="has-success form-group">
+                            <label for="inputIsValid" class=" form-control-label">Referans id</label>
+                            <input type="text" id="Katid" runat="server" class="is-valid form-control-success form-control">
+                        </div>
+                        <div class="form-actions form-group">
+                            <asp:Button ID="sil" OnClick="sil_Click" runat="server" class="btn btn-primary btn-sm" Text="Sil" />
+                        </div>
+                        <asp:Label ID="Label3" runat="server"></asp:Label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+            </div>
         </div>
     </div>
 </asp:Content>

@@ -16,5 +16,6 @@ namespace BD_Elektrik.Admin
             GridView1.DataSource = sonuc;
             GridView1.DataBind();
         }
+        
     }
 }

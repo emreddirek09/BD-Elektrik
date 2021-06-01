@@ -29,7 +29,13 @@ namespace BD_Elektrik.Admin
             //    i++;
             //}
             //baglan.Close();
-            VeriÇek();                       
+            VeriÇek();
+            VeriListele();
+        }
+        protected void VeriListele()
+        {          
+            GridView1.DataSource = nesne.Listele();
+            GridView1.DataBind();
         }
 
 
@@ -84,24 +90,37 @@ namespace BD_Elektrik.Admin
             ürünResim = "../Admin/img/Malzemeler/" + HiddenFieldResim.Value;
             ürünFiyat = Convert.ToInt32(txt_ürünFiyat.Value);
             var deger = nesne.MalzemeEkle(secilen, ürünAdi, ürünAciklama, ürünFiyat, ürünResim);
-
-        }              
-
-        protected void Entty_Click(object sender, EventArgs e)
-        {
-            var sonuc = nesne.Listele();
-            GridView1.DataSource = sonuc;
-            GridView1.DataBind();
+            VeriListele();
+            DropDownListKategori.SelectedValue = "-1";
+            txt_ürünAdi.Value = "";
+            txt_ürünAciklama.Value = "";
         }
 
-        protected void GetByMalzemeler_Click(object sender, EventArgs e)
+        protected void sil_Click(object sender, EventArgs e)
         {
-            Proje.Business.Malzemeler nesne = new Proje.Business.Malzemeler();            
-            var sonuc = nesne.GetByMalzemeler("Esene");
-           // var sonuc1 = nesne.KategoriCek("Anahtar").MalzemeKategariAdi;
-            GridView1.DataSource = sonuc;
-            GridView1.DataBind();
-
+            int id = Convert.ToInt32(Katid.Value);
+            nesne.VeriSil(id);
+            Label3.Text = "Silme Başarılı";
+            VeriListele();
+            Katid.Value = "";
+            txt_ürünFiyat.Value = "";
         }
+
+        //protected void Entty_Click(object sender, EventArgs e)
+        //{
+        //    var sonuc = nesne.Listele();
+        //    GridView1.DataSource = sonuc;
+        //    GridView1.DataBind();
+        //}
+
+        //protected void GetByMalzemeler_Click(object sender, EventArgs e)
+        //{
+        //    Proje.Business.Malzemeler nesne = new Proje.Business.Malzemeler();            
+        //    var sonuc = nesne.GetByMalzemeler("Esene");
+        //   // var sonuc1 = nesne.KategoriCek("Anahtar").MalzemeKategariAdi;
+        //    GridView1.DataSource = sonuc;
+        //    GridView1.DataBind();
+
+        //}
     }
 }

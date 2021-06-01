@@ -87,6 +87,15 @@ namespace BD_Elektrik.Admin
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
+
+        /// <summary>
         /// ObjectDataSource1 control.
         /// </summary>
         /// <remarks>
@@ -105,30 +114,30 @@ namespace BD_Elektrik.Admin
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
-        /// Entty control.
+        /// Katid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Entty;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Katid;
 
         /// <summary>
-        /// GetByMalzemeler control.
+        /// sil control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button GetByMalzemeler;
+        protected global::System.Web.UI.WebControls.Button sil;
 
         /// <summary>
-        /// GridView1 control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label Label3;
     }
 }

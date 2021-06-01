@@ -29,6 +29,21 @@ namespace Proje.Business
 
             return "1";
         }
+        public List<Proje.DataAccess.Hakkimizda> Listele()
+        {
+            var sonuc = entities.Hakkimizda.ToList();
+            return sonuc;
+
+        }
+        public int VeriSil(int i)
+        {
+            var stud = (from s1 in entities.Hakkimizda
+                        where s1.id == i
+                        select s1).SingleOrDefault();
+            entities.Hakkimizda.Remove(stud);
+            entities.SaveChanges();
+            return 1;
+        }
 
     }
 }

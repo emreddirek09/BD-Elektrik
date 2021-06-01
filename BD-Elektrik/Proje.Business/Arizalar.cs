@@ -39,5 +39,14 @@ namespace Proje.Business
             return sonuc;
 
         }
+        public int VeriSil(int i)
+        {
+            var stud = (from s1 in entities.Arizalar
+                        where s1.id == i
+                        select s1).SingleOrDefault();
+            entities.Arizalar.Remove(stud);
+            entities.SaveChanges();
+            return 1;
+        }
     }
 }
