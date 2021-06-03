@@ -44,6 +44,17 @@ namespace Proje.Business
             entities.SaveChanges();
             return 1;
         }
+        public void VeriGüncelle(int idd,string icerikk1, string icerikk2,string özlüsözz1,string özlüsözz2)
+        {
+            var güncelle = entities.Hakkimizda.First(a => a.id ==idd);
+            güncelle.icerik = icerikk1;
+            güncelle.icerik2 = icerikk2;
+            güncelle.ÖzlüSöz1 = özlüsözz1;
+            güncelle.ÖzlüSöz2 = özlüsözz2;
+            güncelle.date = System.DateTime.Now;
+
+            entities.SaveChanges();
+        }
 
     }
 }

@@ -96,22 +96,76 @@ namespace BD_Elektrik.Admin
         protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// Katid control.
+        /// txt_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Katid;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txt_id;
 
         /// <summary>
-        /// sil control.
+        /// TextMail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button sil;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText TextMail;
+
+        /// <summary>
+        /// TextTelefon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText TextTelefon;
+
+        /// <summary>
+        /// TextKonum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText TextKonum;
+
+        /// <summary>
+        /// Textİnstagram control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText Textİnstagram;
+
+        /// <summary>
+        /// TextFacebook control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText TextFacebook;
+
+        /// <summary>
+        /// TextWhatsapp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText TextWhatsapp;
+
+        /// <summary>
+        /// Güncelle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Güncelle;
 
         /// <summary>
         /// Label3 control.

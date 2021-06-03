@@ -36,7 +36,19 @@ namespace Proje.Business
             var sonuc = entities.İletisimBilgileri.ToList();
             return sonuc;
         }
-
+        public void VeriGüncelle(int idd, string maill, string telefonn, string konumm, string instagramm, string facebookk, string whatsappp)
+        {
+            
+                var güncelle = entities.İletisimBilgileri.First(a => a.id == idd);
+                güncelle.mail = maill;
+                güncelle.telefon = telefonn;
+                güncelle.konum = konumm;
+                güncelle.instagram = instagramm;
+                güncelle.facebook = facebookk;
+                güncelle.whatsapp = whatsappp;
+                entities.SaveChanges();
+                        
+        }
 
     }
 }

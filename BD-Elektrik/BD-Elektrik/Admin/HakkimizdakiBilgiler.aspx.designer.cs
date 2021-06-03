@@ -78,22 +78,58 @@ namespace BD_Elektrik.Admin
         protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// Katid control.
+        /// txt_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Katid;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txt_id;
 
         /// <summary>
-        /// sil control.
+        /// TextParagraf1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button sil;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText TextParagraf1;
+
+        /// <summary>
+        /// TextParagraf2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText TextParagraf2;
+
+        /// <summary>
+        /// TextSöz1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText TextSöz1;
+
+        /// <summary>
+        /// TextSöz2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText TextSöz2;
+
+        /// <summary>
+        /// Güncelle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Güncelle;
 
         /// <summary>
         /// Label3 control.

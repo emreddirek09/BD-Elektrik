@@ -78,6 +78,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AdminLogin.aspx" />
     <Content Include="Admin\assets\css\cs-skin-elastic.css" />
     <Content Include="Admin\assets\css\lib\chosen\chosen-sprite%402x.png" />
     <Content Include="Admin\assets\css\lib\chosen\chosen-sprite.png" />
@@ -214,6 +215,13 @@
     </Compile>
     <Compile Include="Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\MalzemeKategori.aspx.cs">
       <DependentUpon>MalzemeKategori.aspx</DependentUpon>

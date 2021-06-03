@@ -49,5 +49,31 @@ namespace BD_Elektrik.Admin
            
         }
 
+        protected void Güncelle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                NesneiletisimBilgileri.VeriGüncelle(Convert.ToInt32(txt_id.Value), TextMail.Value, TextTelefon.Value, TextKonum.Value, Textİnstagram.Value, TextFacebook.Value, TextWhatsapp.Value);
+                Label3.Text = "Güncelleme Başarılı";               
+                Listele();
+                txt_id.Value = "";
+                TextMail.Value = "";
+                TextTelefon.Value = "";
+                TextKonum.Value = "";
+                Textİnstagram.Value = "";
+                TextFacebook.Value = "";
+                TextWhatsapp.Value = "";
+            }
+            catch (Exception ex)
+            {
+                Label3.Text = "Hata Mesajı:" + ex.Message +" Lütfen Tekrar Kontrol Ediniz.";
+
+            }
+
+            
+
+
+
+        }
     }
 }

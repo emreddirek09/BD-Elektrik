@@ -31,23 +31,26 @@ namespace BD_Elektrik.Admin
             {
                 Nesne_Hakkimizda.HakkimizdaEkle(icerik, icerik2, ÖzlüSöz1, ÖzlüSöz2);
                 Label2.Text = "Ekleme Başarılı";
+                txt_paragraf1.Value = "";
+                txt_paragraf2.Value = "";
+                txt_söz1.Value = "";
+                txt_söz2.Value = "";
             }
             else
             {
                 Label2.Text = "Mevcut İçerik Varken Ekleme Yapamazsınız. Güncelleme adımlarını takip ediniz.";
-            }
-            
-           
-            
+            }       
         }
-
-        protected void sil_Click(object sender, EventArgs e)
+        protected void Güncelle_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(Katid.Value);
-            Nesne_Hakkimizda.VeriSil(id);
-            Label3.Text = "Silme Başarılı";
+            Nesne_Hakkimizda.VeriGüncelle( Convert.ToInt32(txt_id.Value), TextParagraf1.Value, TextParagraf2.Value, TextSöz1.Value, TextSöz2.Value);            
             Listele();
-            Katid.Value = "";
+            Label3.Text = "Güncelleme Başarılı";
+            txt_id.Value = "";
+            TextParagraf1.Value = "";
+            TextParagraf2.Value = "";
+            TextSöz1.Value = "";
+            TextSöz2.Value = "";
         }
     }
 }
