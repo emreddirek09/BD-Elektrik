@@ -39,8 +39,8 @@
                     <ItemTemplate>
                         <div class="col-md-4">
                             <div class="card-box-a card-shadow">
-                                <div class="img-box-a">
-                                    <img src="<%#Eval("Resim")%>" alt="" class="img-a img-fluid">
+                                <div class="img-box-a " style="height:300px">
+                                    <img src="<%#Eval("Resim")%>" alt=" <%#Eval("ÜrünAciklama")%>" class="img-a img-fluid text-center">
                                 </div>
                                 <div class="card-overlay">
                                     <div class="card-overlay-a-content">
@@ -51,9 +51,9 @@
                                         </div>
                                         <div class="card-body-a">
                                             <div class="price-box d-flex">
-                                                <span class="price-a"><%#Eval("Fiyat")%></span>
+                                                <span class="price-a"><%#Eval("Fiyat")%>  TL </span>
                                             </div>
-                                             <asp:HyperLink Target="_blank" CssClass="btn btn-success" alt="Detaylı Ürün İncelemesi için.." NavigateUrl='<%# Eval("id","~/Users/ElektrikMalzemeleriDetay.aspx?id={0}") %>' runat="server" Text="İmcele" />                                                                                                                            
+                                             <asp:HyperLink Target="_blank" CssClass="btn btn-success" alt="Detaylı Ürün İncelemesi için.." NavigateUrl='<%# Eval("id","~/Users/ElektrikMalzemeleriDetay.aspx?id={0}") %>' runat="server" Text="İncele" />                                                                                                                            
                                             </a>
                                         </div>
                                     </div>

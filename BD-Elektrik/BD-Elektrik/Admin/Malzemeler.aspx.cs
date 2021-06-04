@@ -112,6 +112,8 @@ namespace BD_Elektrik.Admin
                     DropDownListKategori.SelectedValue = "-1";
                     txt_ürünAdi.Value = "";
                     txt_ürünAciklama.Value = "";
+                    Label1.Text = "";
+                    txt_ürünFiyat.Value = "";
                     VeriListele();
                 }
                 catch (Exception ex)

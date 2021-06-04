@@ -38,7 +38,6 @@
                             <asp:Button ID="Ekle" OnClick="Ekle_Click" runat="server" class="btn btn-primary btn-sm" Text="Ekle" />
                         </div>
                         <asp:Label ID="Label1" runat="server"></asp:Label>
-
                     </div>
                     <asp:GridView CssClass=" container" ID="GridView1" runat="server"></asp:GridView>
                 </div>

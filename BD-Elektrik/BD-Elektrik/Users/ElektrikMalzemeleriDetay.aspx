@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Users/Ana.Master" AutoEventWireup="true" CodeBehind="ElektrikMalzemeleriDetay.aspx.cs" Inherits="BD_Elektrik.Users.WebForm10" %>
+﻿    <%@ Page Title="" Language="C#" MasterPageFile="~/Users/Ana.Master" AutoEventWireup="true" CodeBehind="ElektrikMalzemeleriDetay.aspx.cs" Inherits="BD_Elektrik.Users.WebForm10" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section class="intro-single">
@@ -39,7 +39,7 @@
                                             <div class="info-agents color-a">
                                                 <p>
                                                     <strong>Fiyat: </strong>
-                                                    <span class="color-text-a"><%#Eval("Fiyat")%> </span>
+                                                    <span class="color-text-a"><%#Eval("Fiyat")%> TL</span>
                                                 </p>
                                             </div>
                                         </div>

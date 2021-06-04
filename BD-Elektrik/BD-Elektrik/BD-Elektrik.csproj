@@ -78,7 +78,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin\AdminLogin.aspx" />
     <Content Include="Admin\assets\css\cs-skin-elastic.css" />
     <Content Include="Admin\assets\css\lib\chosen\chosen-sprite%402x.png" />
     <Content Include="Admin\assets\css\lib\chosen\chosen-sprite.png" />
@@ -124,19 +123,6 @@
     <Content Include="Admin\assets\js\vmap.sampledata.js" />
     <Content Include="Admin\assets\js\widgets.js" />
     <Content Include="Admin\assets\scss\style.css" />
-    <Content Include="Admin\images\.gitignore" />
-    <Content Include="Admin\images\admin.jpg" />
-    <Content Include="Admin\images\avatar\1.jpg" />
-    <Content Include="Admin\images\avatar\2.jpg" />
-    <Content Include="Admin\images\avatar\3.jpg" />
-    <Content Include="Admin\images\avatar\4.jpg" />
-    <Content Include="Admin\images\avatar\5.jpg" />
-    <Content Include="Admin\images\avatar\6.jpg" />
-    <Content Include="Admin\images\avatar\64-1.jpg" />
-    <Content Include="Admin\images\avatar\64-2.jpg" />
-    <Content Include="Admin\images\favicon.png" />
-    <Content Include="Admin\images\logo.png" />
-    <Content Include="Admin\images\logo2.png" />
     <Content Include="Admin\MalzemeKategori.aspx" />
     <Content Include="Admin\Malzemeler.aspx" />
     <Content Include="Admin\ArizaEkleme.aspx" />
@@ -215,13 +201,6 @@
     </Compile>
     <Compile Include="Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\AdminLogin.aspx.cs">
-      <DependentUpon>AdminLogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\AdminLogin.aspx.designer.cs">
-      <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\MalzemeKategori.aspx.cs">
       <DependentUpon>MalzemeKategori.aspx</DependentUpon>
@@ -407,7 +386,6 @@
     <Content Include="Admin\assets\fonts\icomoon\icomoon.woff" />
     <Content Include="Admin\assets\scss\style.css.map" />
     <Content Include="Admin\assets\scss\style.scss" />
-    <Content Include="Admin\images\logo.psd" />
     <None Include="Connected Services\WSDLServisAdDeneme\WcfService.wsdl" />
     <None Include="Connected Services\WSDLServisAdDeneme\WcfService.xsd">
       <SubType>Designer</SubType>
