@@ -9,6 +9,7 @@ namespace Proje.Business
 {
     public class Malzemeler
     {
+        public int id { get; set; }
         public string ÜrünAdi { get; set; }
         public string ÜrünAciklama { get; set; }
         public string Fiyat { get; set; }
@@ -43,6 +44,12 @@ namespace Proje.Business
         {
             Proje.DataAccess.BDElektrikEntities ent = new DataAccess.BDElektrikEntities();
             var sonuc = ent.Malzemeler.Where(p=>p.ÜrünAdi==ÜrünAdi);
+            return sonuc.FirstOrDefault();
+        }
+        public Proje.DataAccess.Malzemeler DetayMalzeme(int idd)
+        {
+            Proje.DataAccess.BDElektrikEntities ent = new DataAccess.BDElektrikEntities();
+            var sonuc = ent.Malzemeler.Where(p => p.id == idd);
             return sonuc.FirstOrDefault();
         }
         public int VeriSil(int i)

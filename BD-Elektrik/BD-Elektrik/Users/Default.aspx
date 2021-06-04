@@ -1,92 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Users/Ana.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="BD_Elektrik.Users.WebForm1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!-- ======= Intro Section ======= -->
     <div class="intro intro-carousel">
         <div id="carousel" class="owl-carousel owl-theme">
             <div class="carousel-item-a intro-item bg-image" style="background-image: url(../Admin/img/Slider/Untitled-1_0006_C2-after.jpg)">
-                <%--<div class="overlay overlay-a"></div>
-                <div class="intro-content display-table">
-                    <div class="table-cell">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-8"><a href="../Admin/img/Slider/">../Admin/img/Slider/</a>
-                                    <div class="intro-body">
-                                        <p class="intro-title-top">
-                                            Doral, Florida
-                      <br>
-                                            78345
-                                        </p>
-                                        <h1 class="intro-title mb-4">
-                                            <span class="color-b">204 </span>Mount
-                      <br>
-                                            Olive Road Two
-                                        </h1>
-                                        <p class="intro-subtitle intro-price">
-                                            <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>--%>
+               
             </div>
             <div class="carousel-item-a intro-item bg-image" style="background-image: url(../Admin/img/Slider/FEHBB9FHCB8R3CN.jpg)">
-                <%--<div class="overlay overlay-a"></div>
-                <div class="intro-content display-table">
-                    <div class="table-cell">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <div class="intro-body">
-                                        <p class="intro-title-top">
-                                            Doral, Florida
-                      <br>
-                                            78345
-                                        </p>
-                                        <h1 class="intro-title mb-4">
-                                            <span class="color-b">204 </span>Rino
-                      <br>
-                                            Venda Road Five
-                                        </h1>
-                                        <p class="intro-subtitle intro-price">
-                                            <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>--%>
+               
             </div>
             <div class="carousel-item-a intro-item bg-image" style="background-image: url(../Admin/img/Slider/electrician.jpg)">
-                <%--<div class="overlay overlay-a"></div>
-                <div class="intro-content display-table">
-                    <div class="table-cell">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <div class="intro-body">
-                                        <p class="intro-title-top">
-                                            Doral, Florida
-                      <br>
-                                            78345
-                                        </p>
-                                        <h1 class="intro-title mb-4">
-                                            <span class="color-b">204 </span>Alira
-                      <br>
-                                            Roan Road One
-                                        </h1>
-                                        <p class="intro-subtitle intro-price">
-                                            <a href="#"><span class="price-a">rent | $ 12.000</span></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>--%>
+                
             </div>
         </div>
     </div>
@@ -129,7 +53,7 @@
                                             <div class="price-box d-flex">
                                                 <span class="price-a"><%#Eval("Fiyat")%></span>
                                             </div>
-                                            <asp:LinkButton ID="LinkButton1" runat="server">İncele</asp:LinkButton>                                            
+                                             <asp:HyperLink Target="_blank" CssClass="btn btn-success" alt="Detaylı Ürün İncelemesi için.." NavigateUrl='<%# Eval("id","~/Users/ElektrikMalzemeleriDetay.aspx?id={0}") %>' runat="server" Text="İmcele" />                                                                                                                            
                                             </a>
                                         </div>
                                     </div>

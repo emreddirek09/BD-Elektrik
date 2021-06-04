@@ -27,6 +27,11 @@ namespace Proje.Business
             int count = entities.ArizaKategori.Count();
             return count;
         }
+        public List<Proje.DataAccess.ArizaKategori> Listele()
+        {
+            var sonuc = entities.ArizaKategori.ToList();
+            return sonuc;
 
+        }
     }
 }

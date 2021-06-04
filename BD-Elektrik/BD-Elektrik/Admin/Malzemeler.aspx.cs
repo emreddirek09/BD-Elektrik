@@ -29,11 +29,16 @@ namespace BD_Elektrik.Admin
             //    i++;
             //}
             //baglan.Close();
+            if (!IsPostBack)
+            {
             VeriÇek();
             VeriListele();
+            }
+            
         }
         protected void VeriListele()
         {          
+            
             GridView1.DataSource = nesne.Listele();
             GridView1.DataBind();
         }
@@ -41,13 +46,18 @@ namespace BD_Elektrik.Admin
 
         public void VeriÇek()
         {
-            for (int i = 1; i <= MalzemeKategoriNesne.MalzemeKategoriCount(); i++)
+            foreach (var item in MalzemeKategoriNesne.Listele())
             {
-                string KatAdi = nesne.KategoriCek(i).MalzemeKategariAdi.ToString();
-                int  Katid = nesne.KategoriCek(i).id;
+                var i = item.id;
+                string KatAdi = nesne.KategoriCek(i).MalzemeKategariAdi;
+                int Katid = nesne.KategoriCek(i).id;
                 DropDownListKategori.Items.Add(new ListItem(KatAdi, Katid.ToString()));
-                
             }
+
+            //for (int i = 1; i <= MalzemeKategoriNesne.MalzemeKategoriCount(); i++)
+            //{               
+                
+            //}
         }
 
 
@@ -84,16 +94,35 @@ namespace BD_Elektrik.Admin
 
                 }
             }
-            secilen = DropDownListKategori.SelectedIndex;
-            ürünAdi = txt_ürünAdi.Value;
-            ürünAciklama = txt_ürünAciklama.Value;
-            ürünResim = "../Admin/img/Malzemeler/" + HiddenFieldResim.Value;
-            ürünFiyat = Convert.ToInt32(txt_ürünFiyat.Value);
-            var deger = nesne.MalzemeEkle(secilen, ürünAdi, ürünAciklama, ürünFiyat, ürünResim);
-            VeriListele();
-            DropDownListKategori.SelectedValue = "-1";
-            txt_ürünAdi.Value = "";
-            txt_ürünAciklama.Value = "";
+            
+                if (DropDownListKategori.SelectedValue == "-1" && txt_ürünAdi.Value == "" && txt_ürünAciklama.Value == "" && HiddenFieldResim.Value == "" && txt_ürünFiyat.Value == "")
+                {
+                    Label1.Text = "Boş yerleri kontrol ediniz.";
+                }
+                else
+                {
+                try
+                {
+                    secilen = Convert.ToInt32(DropDownListKategori.SelectedValue);
+                    ürünAdi = txt_ürünAdi.Value;
+                    ürünAciklama = txt_ürünAciklama.Value;
+                    ürünResim = "../Admin/img/Malzemeler/" + HiddenFieldResim.Value;
+                    ürünFiyat = Convert.ToInt32(txt_ürünFiyat.Value);
+                    nesne.MalzemeEkle(secilen, ürünAdi, ürünAciklama, ürünFiyat, ürünResim);
+                    DropDownListKategori.SelectedValue = "-1";
+                    txt_ürünAdi.Value = "";
+                    txt_ürünAciklama.Value = "";
+                    VeriListele();
+                }
+                catch (Exception ex)
+                {
+
+                    Label1.Text = ex.Message +" Açıklama için 50 karakter sınırı vardır.";
+                }
+                    
+                }
+            
+           
         }
 
         protected void sil_Click(object sender, EventArgs e)

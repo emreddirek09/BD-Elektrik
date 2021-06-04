@@ -29,8 +29,10 @@ namespace BD_Elektrik.Admin
         }
         private void verigetir()
         {
-            for (int i = 1; i <= arizaKategoriBussines.ArizaKategoriCount(); i++)
+            //for (int i = 1; i <= arizaKategoriBussines.ArizaKategoriCount(); i++)  
+            foreach (var item in arizaKategoriBussines.Listele())                      
             {
+                var i = item.Kategori_id;
                 int index = Nesne_arizalar.KategoriCek(i).Kategori_id;
                 string value = Nesne_arizalar.KategoriCek(i).Kategori_Ad;
                 DropDownListKategori.Items.Add(new ListItem(value, index.ToString()));
@@ -74,7 +76,7 @@ namespace BD_Elektrik.Admin
 
                 }
             }
-            id = DropDownListKategori.SelectedIndex;
+            id =Convert.ToInt32(DropDownListKategori.SelectedValue);
             ad = txt_ArizaAdi.Value;
             icerik = txt_Arizaicerik.Value;
             resim= "../Admin/img/Arizalar/" + HiddenFieldResim.Value;

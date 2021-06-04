@@ -10,7 +10,7 @@ namespace Proje.Business
     {
         public string MalzemeKategariAdi { get; set; }
 
-
+        Proje.DataAccess.BDElektrikEntities ent = new DataAccess.BDElektrikEntities();
         public string MalzemeKategoriEkle( string KatgIsim)
         {
             Proje.DataAccess.BDElektrikEntities Ekleme = new DataAccess.BDElektrikEntities();
@@ -26,11 +26,17 @@ namespace Proje.Business
 
         public int MalzemeKategoriCount()
         {
-            Proje.DataAccess.BDElektrikEntities ent = new DataAccess.BDElektrikEntities();
+           
             int count = ent.MalzemeKategoriler.Count();
             return count; 
         }
 
+        public Proje.DataAccess.MalzemeKategoriler KategoriCek(int idd)
+        {
+            var sonuc = ent.MalzemeKategoriler.Where(p => p.id == idd);
+            return sonuc.FirstOrDefault();
+
+        }
         public List<Proje.DataAccess.MalzemeKategoriler> Listele()
         {
             Proje.DataAccess.BDElektrikEntities ent = new DataAccess.BDElektrikEntities();
