@@ -33,5 +33,10 @@ namespace BD_Elektrik.WebServis
             }
             return Veri;
         }
+        [WebMethod]
+        public string WebServiceDeneme(string parametre)
+        {
+            return parametre + "Direk";
+        }
     }
 }

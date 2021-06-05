@@ -13,20 +13,21 @@ namespace BD_Elektrik.Admin
      
         protected void Page_Load(object sender, EventArgs e)
         {
-            var deneme = new WSDLServisAdDeneme.WcfServiceClient().ADGetir("Emre");
-            Label2.Text = deneme;
 
-            Timer1.Interval = 1000;
-            Timer1.Enabled = true;            
+            //var deneme = new WSDLServisAdDeneme.WcfServiceClient().ADGetir("Emre");
+            //Label2.Text = deneme;
+            //Timer1.Interval = 1000;
+            //Timer1.Enabled = true;
+
+            var yeni = new WebServis.WebService1().WebServiceDeneme("Emre");
+            Label1.Text = yeni;
         }
 
-        protected void Timer1_Tick(object sender, EventArgs e)
-        {
-           
-         var Liste = new Proje.Business.WebServisDeneme().DateTime();
-         Label1.Text = Liste.ToString();
-            
+        //protected void Timer1_Tick(object sender, EventArgs e)
+        //{           
+        // var Liste = new Proje.Business.WebServisDeneme().DateTime();
+        // Label1.Text = Liste.ToString();           
                 
-        }
+        //}
     }
 }

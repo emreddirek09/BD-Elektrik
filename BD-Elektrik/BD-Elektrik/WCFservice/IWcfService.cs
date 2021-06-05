@@ -1,8 +1,8 @@
 ﻿using System;
+using System.ServiceModel;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
-using System.ServiceModel;
 using System.Text;
 
 namespace BD_Elektrik.WCFservice
@@ -15,7 +15,9 @@ namespace BD_Elektrik.WCFservice
         void DoWork();
 
         [OperationContract]
-        string ADGetir(string parametre);
+        string ADGetir();
 
+        [OperationContract]
+        string DeneMe(string a);
     }
 }

@@ -11,6 +11,7 @@ namespace WebProje.DataAccess
     {
         public SqlConnection Baglan()
         {
+            //SqlConnection sqlConnection = new SqlConnection(@"Data Source=176.53.69.151\MSSQLSERVER2019; Initial Catalog=BDElektrik; User ID=Burak; Password=09Admin09++");            
             SqlConnection sqlConnection = new SqlConnection("Server=DESKTOP-J9OEKO6; Database=BDElektrik; Integrated Security=True");
             sqlConnection.Open();
             return sqlConnection;

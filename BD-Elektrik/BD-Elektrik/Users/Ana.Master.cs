@@ -68,7 +68,6 @@ namespace BD_Elektrik.Users
                 Session.Add("SessionIsim", isim);
                 string Resim = Bussines_müsteriGiris.SessionResim();
                 Session.Add("SessionResim", Resim);
-
                 //Session.Timeout = 1;
                 Response.Redirect("MüşteriSayfası.aspx");
 

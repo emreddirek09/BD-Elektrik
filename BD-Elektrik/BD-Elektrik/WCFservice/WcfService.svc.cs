@@ -13,12 +13,17 @@ namespace BD_Elektrik.WCFservice
     {
         public void DoWork()
         {
-        }
 
+        }
         //işlemlerimizi burada yapyoruz. Fonksiyon ön adını interface yazmamız lazım.
-        public string ADGetir(string parametre)
+        public string ADGetir()
         {
-            return parametre + "Direk";
+            //return "Emre Direk";
+            return "Emre Direk";
+        }
+        public string DeneMe(string a)
+        {
+            return a + "deneme";
         }
     }
 }

@@ -12,7 +12,7 @@ namespace BD_Elektrik.Users
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        private string deger;
+        //private string deger;
 
         protected void Page_Load(object sender, EventArgs e)
         {
