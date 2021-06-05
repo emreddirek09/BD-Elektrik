@@ -13,7 +13,7 @@ namespace Proje.Business
         public string GaleriYazi { get; set; }
         public string OlusturmaTarihi { get; set; }
 
-        DataAccess.BDElektrikEntities entities = new DataAccess.BDElektrikEntities();
+        Proje.DataAccess.BDElektrikEntities2 entities = new DataAccess.BDElektrikEntities2();
         DataAccess.Galeri Nesne_Galeri = new DataAccess.Galeri();
         public string GaleriEkle(string GaleriBaslik, string GaleriYazi, string resim)
         {

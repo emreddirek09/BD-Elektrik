@@ -14,7 +14,7 @@ namespace Proje.Business
         public string sifreOnay { get; set; }
         public string Resim { get; set; }
 
-        DataAccess.BDElektrikEntities entities = new DataAccess.BDElektrikEntities();
+        DataAccess.BDElektrikEntities2 entities = new DataAccess.BDElektrikEntities2();
         DataAccess.MüsteriKayıt müsteriKayıtNesne = new DataAccess.MüsteriKayıt();
         public string MüsteriEkleme(string isimm, string maill, string sifree, string sifreOnayy, string Resimm)
         {

@@ -13,7 +13,7 @@ namespace Proje.Business
         public string Arizaicerik { get; set; }
         public string Resim { get; set; }
 
-        DataAccess.BDElektrikEntities entities = new DataAccess.BDElektrikEntities();
+        DataAccess.BDElektrikEntities2 entities = new DataAccess.BDElektrikEntities2();
         DataAccess.Arizalar Nesne_arizalar = new DataAccess.Arizalar();
         public string ArizaEkle(int fkid, string ArizaAd, string icerik, string resim)
         {

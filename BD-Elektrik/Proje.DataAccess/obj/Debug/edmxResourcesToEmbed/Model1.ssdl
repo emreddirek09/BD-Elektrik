@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="BDElektrikModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="bdelekti_BDElektrikModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="ArizaKategori">
     <Key>
       <PropertyRef Name="Kategori_id" />
@@ -127,16 +127,6 @@
     <Property Name="ReferansAdi" Type="nvarchar(max)" />
     <Property Name="Resim" Type="nvarchar(max)" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <Association Name="FK_Arizalar_ArizaKategori">
     <End Role="ArizaKategori" Type="Self.ArizaKategori" Multiplicity="1" />
     <End Role="Arizalar" Type="Self.Arizalar" Multiplicity="*" />
@@ -173,7 +163,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="BDElektrikModelStoreContainer">
+  <EntityContainer Name="bdelekti_BDElektrikModelStoreContainer">
     <EntitySet Name="ArizaKategori" EntityType="Self.ArizaKategori" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Arizalar" EntityType="Self.Arizalar" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
@@ -187,7 +177,6 @@
     <EntitySet Name="MüsteriKayıt" EntityType="Self.MüsteriKayıt" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MüsteriYorumları" EntityType="Self.MüsteriYorumları" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Referanslar" EntityType="Self.Referanslar" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Arizalar_ArizaKategori" Association="Self.FK_Arizalar_ArizaKategori">
       <End Role="ArizaKategori" EntitySet="ArizaKategori" />
       <End Role="Arizalar" EntitySet="Arizalar" />

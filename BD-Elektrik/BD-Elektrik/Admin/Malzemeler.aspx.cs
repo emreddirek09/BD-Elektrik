@@ -63,7 +63,7 @@ namespace BD_Elektrik.Admin
 
         public List<Proje.DataAccess.Malzemeler> Listele()
         {
-            Proje.DataAccess.BDElektrikEntities ent = new Proje.DataAccess.BDElektrikEntities();
+            Proje.DataAccess.BDElektrikEntities2 ent = new Proje.DataAccess.BDElektrikEntities2();
             var sonuc = ent.Malzemeler.OrderByDescending(p => p.id).ToList();
             return sonuc;
         }

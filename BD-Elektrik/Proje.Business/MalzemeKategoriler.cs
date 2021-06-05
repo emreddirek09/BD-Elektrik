@@ -10,10 +10,10 @@ namespace Proje.Business
     {
         public string MalzemeKategariAdi { get; set; }
 
-        Proje.DataAccess.BDElektrikEntities ent = new DataAccess.BDElektrikEntities();
+        Proje.DataAccess.BDElektrikEntities2 ent = new DataAccess.BDElektrikEntities2();
         public string MalzemeKategoriEkle( string KatgIsim)
         {
-            Proje.DataAccess.BDElektrikEntities Ekleme = new DataAccess.BDElektrikEntities();
+            Proje.DataAccess.BDElektrikEntities2 Ekleme = new DataAccess.BDElektrikEntities2();
             Proje.DataAccess.MalzemeKategoriler yeni = new DataAccess.MalzemeKategoriler();
 
             yeni.MalzemeKategariAdi = KatgIsim;
@@ -39,7 +39,7 @@ namespace Proje.Business
         }
         public List<Proje.DataAccess.MalzemeKategoriler> Listele()
         {
-            Proje.DataAccess.BDElektrikEntities ent = new DataAccess.BDElektrikEntities();
+            Proje.DataAccess.BDElektrikEntities2 ent = new DataAccess.BDElektrikEntities2();
             ent.Database.Connection.Open();
             var sonuc = ent.MalzemeKategoriler.ToList();
             return sonuc;

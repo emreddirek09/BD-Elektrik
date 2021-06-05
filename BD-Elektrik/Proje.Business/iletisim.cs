@@ -14,7 +14,7 @@ namespace Proje.Business
         public string mesaj { get; set; }
         public string date { get; set; }
 
-        DataAccess.BDElektrikEntities entities = new DataAccess.BDElektrikEntities();
+        DataAccess.BDElektrikEntities2 entities = new DataAccess.BDElektrikEntities2();
         DataAccess.iletisim Nesne_iletisim = new DataAccess.iletisim();
 
         public string İletisimEkle(string isim, string mail, string konu, string mesaj)

@@ -14,7 +14,7 @@ namespace Proje.Business
         public string ÖzlüSöz2 { get; set; }
         public string date { get; set; }
 
-        DataAccess.BDElektrikEntities entities = new DataAccess.BDElektrikEntities();
+        DataAccess.BDElektrikEntities2 entities = new DataAccess.BDElektrikEntities2();
         DataAccess.Hakkimizda Nesne_Hakkimizda = new DataAccess.Hakkimizda();
 
         public string HakkimizdaEkle(string icerik, string icerik2, string ÖzlüSöz1, string ÖzlüSöz2)

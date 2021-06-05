@@ -17,7 +17,7 @@ namespace Proje.Business
         
         public string MalzemeEkle(int secilen, string ürünAdi, string aciklama, int fiyat, string resim)
         {
-            Proje.DataAccess.BDElektrikEntities Ekleme = new Proje.DataAccess.BDElektrikEntities();
+            Proje.DataAccess.BDElektrikEntities2 Ekleme = new Proje.DataAccess.BDElektrikEntities2();
             Proje.DataAccess.Malzemeler yeni = new Proje.DataAccess.Malzemeler();
             yeni.MalzemeFK = secilen;
             yeni.ÜrünAdi = ürünAdi;
@@ -30,31 +30,31 @@ namespace Proje.Business
         }
         public Proje.DataAccess.MalzemeKategoriler KategoriCek(int idd)
         {
-            Proje.DataAccess.BDElektrikEntities ent = new DataAccess.BDElektrikEntities();
+            Proje.DataAccess.BDElektrikEntities2 ent = new DataAccess.BDElektrikEntities2();
             var sonuc = ent.MalzemeKategoriler.Where(p =>p.id==idd);      
             return sonuc.FirstOrDefault();
         }        
         public List<Proje.DataAccess.Malzemeler> Listele()
         {
-            Proje.DataAccess.BDElektrikEntities ent = new DataAccess.BDElektrikEntities();
+            Proje.DataAccess.BDElektrikEntities2 ent = new DataAccess.BDElektrikEntities2();
             var sonuc = ent.Malzemeler.ToList();
             return sonuc;
         }
         public Proje.DataAccess.Malzemeler GetByMalzemeler(string ÜrünAdi)
         {
-            Proje.DataAccess.BDElektrikEntities ent = new DataAccess.BDElektrikEntities();
+            Proje.DataAccess.BDElektrikEntities2 ent = new DataAccess.BDElektrikEntities2();
             var sonuc = ent.Malzemeler.Where(p=>p.ÜrünAdi==ÜrünAdi);
             return sonuc.FirstOrDefault();
         }
         public Proje.DataAccess.Malzemeler DetayMalzeme(int idd)
         {
-            Proje.DataAccess.BDElektrikEntities ent = new DataAccess.BDElektrikEntities();
+            Proje.DataAccess.BDElektrikEntities2 ent = new DataAccess.BDElektrikEntities2();
             var sonuc = ent.Malzemeler.Where(p => p.id == idd);
             return sonuc.FirstOrDefault();
         }
         public int VeriSil(int i)
         {
-            Proje.DataAccess.BDElektrikEntities ent = new DataAccess.BDElektrikEntities();
+            Proje.DataAccess.BDElektrikEntities2 ent = new DataAccess.BDElektrikEntities2();
             var stud = (from s1 in ent.Malzemeler
                         where s1.id == i
                         select s1).SingleOrDefault();

@@ -15,7 +15,7 @@ namespace Proje.Business
         public DateTime date { get; set; }
 
 
-        Proje.DataAccess.BDElektrikEntities entities = new DataAccess.BDElektrikEntities();
+        Proje.DataAccess.BDElektrikEntities2 entities = new DataAccess.BDElektrikEntities2();
         Proje.DataAccess.Login loginNesne = new DataAccess.Login();
         public string LogKayit(int id)
         {

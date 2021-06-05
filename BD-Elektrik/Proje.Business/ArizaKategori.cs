@@ -10,7 +10,7 @@ namespace Proje.Business
     {
         public string Kategori_Ad { get; set; }
 
-        DataAccess.BDElektrikEntities entities = new DataAccess.BDElektrikEntities();
+        DataAccess.BDElektrikEntities2 entities = new DataAccess.BDElektrikEntities2();
         DataAccess.ArizaKategori yeni = new DataAccess.ArizaKategori();
         
         public string ArizaKatEkle(string KatAdi)

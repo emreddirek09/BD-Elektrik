@@ -14,7 +14,7 @@ namespace BD_Elektrik.Users
         {
 
         }
-        Proje.DataAccess.BDElektrikEntities entities = new Proje.DataAccess.BDElektrikEntities();
+        Proje.DataAccess.BDElektrikEntities2 entities = new Proje.DataAccess.BDElektrikEntities2();
         Proje.Business.MüsteriGiris Bussines_müsteriGiris = new Proje.Business.MüsteriGiris();
         Proje.Business.MüsteriKayıt Busines_MüsteriKayıt = new Proje.Business.MüsteriKayıt();
         protected void MüsteriKayit_Click(object sender, EventArgs e)

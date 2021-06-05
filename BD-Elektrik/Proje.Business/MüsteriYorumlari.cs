@@ -11,7 +11,7 @@ namespace Proje.Business
         public int Müsteri_id { get; set; }
         public string Müsteri_Yorum { get; set; }
 
-        Proje.DataAccess.BDElektrikEntities entities = new DataAccess.BDElektrikEntities();
+        Proje.DataAccess.BDElektrikEntities2 entities = new DataAccess.BDElektrikEntities2();
         DataAccess.MüsteriYorumları müsteriYorumlarıNesne = new DataAccess.MüsteriYorumları();
 
         public string YorumEkle(int logUser, string yorum)

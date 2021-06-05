@@ -11,7 +11,7 @@ namespace Proje.Business
         public string ReferansAdi { get; set; }
         public string Resim { get; set; }
 
-        DataAccess.BDElektrikEntities entities = new DataAccess.BDElektrikEntities();
+        DataAccess.BDElektrikEntities2 entities = new DataAccess.BDElektrikEntities2();
         DataAccess.Referanslar Nesne_referanslar = new DataAccess.Referanslar();
 
         public string ReferansEkle(string RefAdi, string Resim)

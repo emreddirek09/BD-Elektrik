@@ -8,15 +8,15 @@ namespace Proje.Business
     public class WebServisDeneme
     {
         
-        public IList<string> ServisGetir()
-        {
-            var servis = new BD_Elektrik.WebServis.WebService1().AdlariListele(15);
-            return servis;
-        }
+        //public IList<string> ServisGetir()
+        //{
+        //    var servis = new BD_Elektrik.WebServis.WebService1().AdlariListele(15);
+        //    return servis;
+        //}
 
-        public string DateTime ()
-        {
-            return System.DateTime.Now.ToString();
-        }
+        //public string DateTime ()
+        //{
+        //    return System.DateTime.Now.ToString();
+        //}
     }
 }

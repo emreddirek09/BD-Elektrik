@@ -13,10 +13,10 @@ namespace Proje.DataAccess
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BDElektrikEntities : DbContext
+    public partial class BDElektrikEntities2 : DbContext
     {
-        public BDElektrikEntities()
-            : base("name=BDElektrikEntities")
+        public BDElektrikEntities2()
+            : base("name=BDElektrikEntities2")
         {
         }
     
@@ -31,13 +31,12 @@ namespace Proje.DataAccess
         public virtual DbSet<Galeri> Galeri { get; set; }
         public virtual DbSet<Hakkimizda> Hakkimizda { get; set; }
         public virtual DbSet<iletisim> iletisim { get; set; }
+        public virtual DbSet<İletisimBilgileri> İletisimBilgileri { get; set; }
+        public virtual DbSet<Login> Login { get; set; }
         public virtual DbSet<MalzemeKategoriler> MalzemeKategoriler { get; set; }
         public virtual DbSet<Malzemeler> Malzemeler { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<İletisimBilgileri> İletisimBilgileri { get; set; }
-        public virtual DbSet<Referanslar> Referanslar { get; set; }
         public virtual DbSet<MüsteriKayıt> MüsteriKayıt { get; set; }
         public virtual DbSet<MüsteriYorumları> MüsteriYorumları { get; set; }
-        public virtual DbSet<Login> Login { get; set; }
+        public virtual DbSet<Referanslar> Referanslar { get; set; }
     }
 }

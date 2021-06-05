@@ -15,7 +15,7 @@ namespace Proje.Business
         public string facebook { get; set; }
         public string whatsapp { get; set; }
 
-        DataAccess.BDElektrikEntities entities = new DataAccess.BDElektrikEntities();
+        DataAccess.BDElektrikEntities2 entities = new DataAccess.BDElektrikEntities2();
         DataAccess.İletisimBilgileri Nesne_iletisimBilgileri = new DataAccess.İletisimBilgileri();
 
         public string İletisimBilgileriEkle(string mail, string telefon, string konum, string instagram, string facebook, string whatsapp)

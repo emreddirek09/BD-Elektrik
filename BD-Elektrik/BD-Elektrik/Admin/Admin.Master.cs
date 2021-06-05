@@ -11,23 +11,23 @@ namespace BD_Elektrik.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
-            {
-                if (Session["Giris"] != null)
-                {
-                    Response.Redirect("Admin/AdminDefault.aspx");
-                }
-                else
-                {
-                    Response.Redirect("https://goog.com/index.php");
-                }
+            //try
+            //{
+            //    if (Session["Giris"] != null)
+            //    {
+            //        Response.Redirect("Admin/AdminDefault.aspx");
+            //    }
+            //    else
+            //    {
+            //        Response.Redirect("https://goog.com/index.php");
+            //    }
 
-            }
-            catch (Exception)
-            {
+            //}
+            //catch (Exception)
+            //{
 
-                throw;
-            }
+            //    throw;
+            //}
             
         }
     }

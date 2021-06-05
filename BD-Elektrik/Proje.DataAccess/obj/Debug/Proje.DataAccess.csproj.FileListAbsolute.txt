@@ -5,7 +5,6 @@ C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\bin\Debug\En
 C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\bin\Debug\EntityFramework.xml
 C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\obj\Debug\Proje.DataAccess.csprojAssemblyReference.cache
 C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\obj\Debug\Proje.DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\obj\Debug\Proje.DataAccess.csproj.CopyComplete
 C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\obj\Debug\Proje.DataAccess.dll

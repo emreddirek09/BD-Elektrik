@@ -14,7 +14,7 @@ namespace Proje.Business
         string kul, sif, kulisim,Resim;
         int SessionLog;
 
-        DataAccess.BDElektrikEntities entities = new DataAccess.BDElektrikEntities();
+        DataAccess.BDElektrikEntities2 entities = new DataAccess.BDElektrikEntities2();
         Business.Login login = new Business.Login();
         public Boolean Login(string username, string password)
         {
