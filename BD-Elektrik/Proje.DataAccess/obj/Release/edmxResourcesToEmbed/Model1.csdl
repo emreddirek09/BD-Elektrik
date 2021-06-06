@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdelekti_BDElektrikModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ArizaKategori">
+    <Key>
+      <PropertyRef Name="Kategori_id" />
+    </Key>
+    <Property Name="Kategori_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kategori_Ad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Arizalar" Relationship="Self.FK_Arizalar_ArizaKategori" FromRole="ArizaKategori" ToRole="Arizalar" />
+  </EntityType>
+  <EntityType Name="Arizalar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ArizaKatFK" Type="Int32" Nullable="false" />
+    <Property Name="ArizaAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Arizaiçerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ArizaKategori" Relationship="Self.FK_Arizalar_ArizaKategori" FromRole="Arizalar" ToRole="ArizaKategori" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="isim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mesaj" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Galeri">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GaleriBaslik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GaleriResim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GaleriYazi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OlusturmaTarihi" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Hakkimizda">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="icerik" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="icerik2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ÖzlüSöz1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ÖzlüSöz2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="iletisim">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="isim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="konu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mesaj" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="İletisimBilgileri">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="telefon" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="konum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="instagram" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="facebook" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="whatsapp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Yetki" Type="Int32" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <Property Name="MüsteriFKid" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="MüsteriKayıt" Relationship="Self.FK_Login_MüsteriKayıt" FromRole="Login" ToRole="MüsteriKayıt" />
+  </EntityType>
+  <EntityType Name="MalzemeKategoriler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MalzemeKategariAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Malzemeler" Relationship="Self.FK_Malzemeler_MalzemeKategoriler" FromRole="MalzemeKategoriler" ToRole="Malzemeler" />
+  </EntityType>
+  <EntityType Name="Malzemeler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MalzemeFK" Type="Int32" Nullable="false" />
+    <Property Name="ÜrünAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ÜrünAciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fiyat" Type="Int32" />
+    <Property Name="Resim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MalzemeKategoriler" Relationship="Self.FK_Malzemeler_MalzemeKategoriler" FromRole="Malzemeler" ToRole="MalzemeKategoriler" />
+  </EntityType>
+  <EntityType Name="MüsteriKayıt">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="isim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sifreOnay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Login" Relationship="Self.FK_Login_MüsteriKayıt" FromRole="MüsteriKayıt" ToRole="Login" />
+  </EntityType>
+  <EntityType Name="MüsteriYorumları">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Müsteri_id" Type="Int32" Nullable="false" />
+    <Property Name="Müsteri_Yorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Referanslar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReferansAdi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Arizalar_ArizaKategori">
+    <End Role="ArizaKategori" Type="Self.ArizaKategori" Multiplicity="1" />
+    <End Role="Arizalar" Type="Self.Arizalar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ArizaKategori">
+        <PropertyRef Name="Kategori_id" />
+      </Principal>
+      <Dependent Role="Arizalar">
+        <PropertyRef Name="ArizaKatFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Login_MüsteriKayıt">
+    <End Role="MüsteriKayıt" Type="Self.MüsteriKayıt" Multiplicity="1" />
+    <End Role="Login" Type="Self.Login" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MüsteriKayıt">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Login">
+        <PropertyRef Name="MüsteriFKid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Malzemeler_MalzemeKategoriler">
+    <End Role="MalzemeKategoriler" Type="Self.MalzemeKategoriler" Multiplicity="1" />
+    <End Role="Malzemeler" Type="Self.Malzemeler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MalzemeKategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Malzemeler">
+        <PropertyRef Name="MalzemeFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BDElektrikEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ArizaKategori" EntityType="Self.ArizaKategori" />
+    <EntitySet Name="Arizalar" EntityType="Self.Arizalar" />
+    <EntitySet Name="Blog" EntityType="Self.Blog" />
+    <EntitySet Name="Galeri" EntityType="Self.Galeri" />
+    <EntitySet Name="Hakkimizda" EntityType="Self.Hakkimizda" />
+    <EntitySet Name="iletisim" EntityType="Self.iletisim" />
+    <EntitySet Name="İletisimBilgileri" EntityType="Self.İletisimBilgileri" />
+    <EntitySet Name="Login" EntityType="Self.Login" />
+    <EntitySet Name="MalzemeKategoriler" EntityType="Self.MalzemeKategoriler" />
+    <EntitySet Name="Malzemeler" EntityType="Self.Malzemeler" />
+    <EntitySet Name="MüsteriKayıt" EntityType="Self.MüsteriKayıt" />
+    <EntitySet Name="MüsteriYorumları" EntityType="Self.MüsteriYorumları" />
+    <EntitySet Name="Referanslar" EntityType="Self.Referanslar" />
+    <AssociationSet Name="FK_Arizalar_ArizaKategori" Association="Self.FK_Arizalar_ArizaKategori">
+      <End Role="ArizaKategori" EntitySet="ArizaKategori" />
+      <End Role="Arizalar" EntitySet="Arizalar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Login_MüsteriKayıt" Association="Self.FK_Login_MüsteriKayıt">
+      <End Role="MüsteriKayıt" EntitySet="MüsteriKayıt" />
+      <End Role="Login" EntitySet="Login" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Malzemeler_MalzemeKategoriler" Association="Self.FK_Malzemeler_MalzemeKategoriler">
+      <End Role="MalzemeKategoriler" EntitySet="MalzemeKategoriler" />
+      <End Role="Malzemeler" EntitySet="Malzemeler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

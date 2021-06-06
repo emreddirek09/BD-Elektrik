@@ -1,0 +1,12 @@
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\bin\Release\Proje.DataAccess.dll.config
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\bin\Release\Proje.DataAccess.dll
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\bin\Release\Proje.DataAccess.pdb
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\bin\Release\EntityFramework.dll
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\bin\Release\EntityFramework.xml
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\obj\Release\Proje.DataAccess.csprojAssemblyReference.cache
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\obj\Release\Proje.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\obj\Release\Proje.DataAccess.csproj.CopyComplete
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\obj\Release\Proje.DataAccess.dll
+C:\Users\Emre\source\repos\BD-Elektrik\BD-Elektrik\Proje.DataAccess\obj\Release\Proje.DataAccess.pdb

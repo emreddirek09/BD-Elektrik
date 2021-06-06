@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdelekti_BDElektrikModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ArizaKategori">
+    <Key>
+      <PropertyRef Name="Kategori_id" />
+    </Key>
+    <Property Name="Kategori_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kategori_Ad" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Arizalar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ArizaKatFK" Type="int" Nullable="false" />
+    <Property Name="ArizaAdi" Type="nvarchar(max)" />
+    <Property Name="Arizaiçerik" Type="nvarchar(max)" />
+    <Property Name="Resim" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="isim" Type="nvarchar(max)" />
+    <Property Name="mail" Type="nvarchar(max)" />
+    <Property Name="mesaj" Type="nvarchar(max)" />
+    <Property Name="date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Galeri">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GaleriBaslik" Type="nvarchar(max)" />
+    <Property Name="GaleriResim" Type="nvarchar(max)" />
+    <Property Name="GaleriYazi" Type="nvarchar(max)" />
+    <Property Name="OlusturmaTarihi" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Hakkimizda">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="icerik" Type="nvarchar(max)" />
+    <Property Name="icerik2" Type="nvarchar(max)" />
+    <Property Name="ÖzlüSöz1" Type="nvarchar" MaxLength="50" />
+    <Property Name="ÖzlüSöz2" Type="nvarchar" MaxLength="50" />
+    <Property Name="date" Type="date" />
+  </EntityType>
+  <EntityType Name="iletisim">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="isim" Type="nvarchar(max)" />
+    <Property Name="mail" Type="nvarchar(max)" />
+    <Property Name="konu" Type="nvarchar(max)" />
+    <Property Name="mesaj" Type="nvarchar" MaxLength="50" />
+    <Property Name="date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="İletisimBilgileri">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mail" Type="nvarchar(max)" />
+    <Property Name="telefon" Type="nchar" MaxLength="11" />
+    <Property Name="konum" Type="nvarchar(max)" />
+    <Property Name="instagram" Type="nvarchar(max)" />
+    <Property Name="facebook" Type="nvarchar(max)" />
+    <Property Name="whatsapp" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Yetki" Type="int" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="MüsteriFKid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MalzemeKategoriler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MalzemeKategariAdi" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Malzemeler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MalzemeFK" Type="int" Nullable="false" />
+    <Property Name="ÜrünAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="ÜrünAciklama" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fiyat" Type="int" />
+    <Property Name="Resim" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MüsteriKayıt">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="isim" Type="nvarchar" MaxLength="50" />
+    <Property Name="mail" Type="nvarchar" MaxLength="50" />
+    <Property Name="sifre" Type="nvarchar" MaxLength="50" />
+    <Property Name="sifreOnay" Type="nvarchar" MaxLength="50" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="Resim" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="MüsteriYorumları">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Müsteri_id" Type="int" Nullable="false" />
+    <Property Name="Müsteri_Yorum" Type="nvarchar(max)" />
+    <Property Name="date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Referanslar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReferansAdi" Type="nvarchar(max)" />
+    <Property Name="Resim" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_Arizalar_ArizaKategori">
+    <End Role="ArizaKategori" Type="Self.ArizaKategori" Multiplicity="1" />
+    <End Role="Arizalar" Type="Self.Arizalar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ArizaKategori">
+        <PropertyRef Name="Kategori_id" />
+      </Principal>
+      <Dependent Role="Arizalar">
+        <PropertyRef Name="ArizaKatFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Login_MüsteriKayıt">
+    <End Role="MüsteriKayıt" Type="Self.MüsteriKayıt" Multiplicity="1" />
+    <End Role="Login" Type="Self.Login" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MüsteriKayıt">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Login">
+        <PropertyRef Name="MüsteriFKid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Malzemeler_MalzemeKategoriler">
+    <End Role="MalzemeKategoriler" Type="Self.MalzemeKategoriler" Multiplicity="1" />
+    <End Role="Malzemeler" Type="Self.Malzemeler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MalzemeKategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Malzemeler">
+        <PropertyRef Name="MalzemeFK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bdelekti_BDElektrikModelStoreContainer">
+    <EntitySet Name="ArizaKategori" EntityType="Self.ArizaKategori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Arizalar" EntityType="Self.Arizalar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Galeri" EntityType="Self.Galeri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hakkimizda" EntityType="Self.Hakkimizda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="iletisim" EntityType="Self.iletisim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="İletisimBilgileri" EntityType="Self.İletisimBilgileri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MalzemeKategoriler" EntityType="Self.MalzemeKategoriler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Malzemeler" EntityType="Self.Malzemeler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MüsteriKayıt" EntityType="Self.MüsteriKayıt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MüsteriYorumları" EntityType="Self.MüsteriYorumları" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Referanslar" EntityType="Self.Referanslar" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Arizalar_ArizaKategori" Association="Self.FK_Arizalar_ArizaKategori">
+      <End Role="ArizaKategori" EntitySet="ArizaKategori" />
+      <End Role="Arizalar" EntitySet="Arizalar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Login_MüsteriKayıt" Association="Self.FK_Login_MüsteriKayıt">
+      <End Role="MüsteriKayıt" EntitySet="MüsteriKayıt" />
+      <End Role="Login" EntitySet="Login" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Malzemeler_MalzemeKategoriler" Association="Self.FK_Malzemeler_MalzemeKategoriler">
+      <End Role="MalzemeKategoriler" EntitySet="MalzemeKategoriler" />
+      <End Role="Malzemeler" EntitySet="Malzemeler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

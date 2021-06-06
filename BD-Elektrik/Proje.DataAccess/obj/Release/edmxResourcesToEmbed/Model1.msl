@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bdelekti_BDElektrikModelStoreContainer" CdmEntityContainer="BDElektrikEntities2">
+    <EntitySetMapping Name="ArizaKategori">
+      <EntityTypeMapping TypeName="bdelekti_BDElektrikModel.ArizaKategori">
+        <MappingFragment StoreEntitySet="ArizaKategori">
+          <ScalarProperty Name="Kategori_id" ColumnName="Kategori_id" />
+          <ScalarProperty Name="Kategori_Ad" ColumnName="Kategori_Ad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Arizalar">
+      <EntityTypeMapping TypeName="bdelekti_BDElektrikModel.Arizalar">
+        <MappingFragment StoreEntitySet="Arizalar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ArizaKatFK" ColumnName="ArizaKatFK" />
+          <ScalarProperty Name="ArizaAdi" ColumnName="ArizaAdi" />
+          <ScalarProperty Name="Arizaiçerik" ColumnName="Arizaiçerik" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Blog">
+      <EntityTypeMapping TypeName="bdelekti_BDElektrikModel.Blog">
+        <MappingFragment StoreEntitySet="Blog">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="isim" ColumnName="isim" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="mesaj" ColumnName="mesaj" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Galeri">
+      <EntityTypeMapping TypeName="bdelekti_BDElektrikModel.Galeri">
+        <MappingFragment StoreEntitySet="Galeri">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="GaleriBaslik" ColumnName="GaleriBaslik" />
+          <ScalarProperty Name="GaleriResim" ColumnName="GaleriResim" />
+          <ScalarProperty Name="GaleriYazi" ColumnName="GaleriYazi" />
+          <ScalarProperty Name="OlusturmaTarihi" ColumnName="OlusturmaTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hakkimizda">
+      <EntityTypeMapping TypeName="bdelekti_BDElektrikModel.Hakkimizda">
+        <MappingFragment StoreEntitySet="Hakkimizda">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="icerik" ColumnName="icerik" />
+          <ScalarProperty Name="icerik2" ColumnName="icerik2" />
+          <ScalarProperty Name="ÖzlüSöz1" ColumnName="ÖzlüSöz1" />
+          <ScalarProperty Name="ÖzlüSöz2" ColumnName="ÖzlüSöz2" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iletisim">
+      <EntityTypeMapping TypeName="bdelekti_BDElektrikModel.iletisim">
+        <MappingFragment StoreEntitySet="iletisim">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="isim" ColumnName="isim" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="konu" ColumnName="konu" />
+          <ScalarProperty Name="mesaj" ColumnName="mesaj" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="İletisimBilgileri">
+      <EntityTypeMapping TypeName="bdelekti_BDElektrikModel.İletisimBilgileri">
+        <MappingFragment StoreEntitySet="İletisimBilgileri">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="konum" ColumnName="konum" />
+          <ScalarProperty Name="instagram" ColumnName="instagram" />
+          <ScalarProperty Name="facebook" ColumnName="facebook" />
+          <ScalarProperty Name="whatsapp" ColumnName="whatsapp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Login">
+      <EntityTypeMapping TypeName="bdelekti_BDElektrikModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Yetki" ColumnName="Yetki" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="MüsteriFKid" ColumnName="MüsteriFKid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MalzemeKategoriler">
+      <EntityTypeMapping TypeName="bdelekti_BDElektrikModel.MalzemeKategoriler">
+        <MappingFragment StoreEntitySet="MalzemeKategoriler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="MalzemeKategariAdi" ColumnName="MalzemeKategariAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Malzemeler">
+      <EntityTypeMapping TypeName="bdelekti_BDElektrikModel.Malzemeler">
+        <MappingFragment StoreEntitySet="Malzemeler">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="MalzemeFK" ColumnName="MalzemeFK" />
+          <ScalarProperty Name="ÜrünAdi" ColumnName="ÜrünAdi" />
+          <ScalarProperty Name="ÜrünAciklama" ColumnName="ÜrünAciklama" />
+          <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MüsteriKayıt">
+      <EntityTypeMapping TypeName="bdelekti_BDElektrikModel.MüsteriKayıt">
+        <MappingFragment StoreEntitySet="MüsteriKayıt">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="isim" ColumnName="isim" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="sifreOnay" ColumnName="sifreOnay" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MüsteriYorumları">
+      <EntityTypeMapping TypeName="bdelekti_BDElektrikModel.MüsteriYorumları">
+        <MappingFragment StoreEntitySet="MüsteriYorumları">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Müsteri_id" ColumnName="Müsteri_id" />
+          <ScalarProperty Name="Müsteri_Yorum" ColumnName="Müsteri_Yorum" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Referanslar">
+      <EntityTypeMapping TypeName="bdelekti_BDElektrikModel.Referanslar">
+        <MappingFragment StoreEntitySet="Referanslar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ReferansAdi" ColumnName="ReferansAdi" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

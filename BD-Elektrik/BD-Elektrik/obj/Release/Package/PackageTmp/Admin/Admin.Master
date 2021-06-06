@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="BD_Elektrik.Admin.Admin" %>
+
+<html class="no-js" lang="">
+<head runat="server">
+    <meta charset="utf-8">
+    <title>Burak Elektirk Kontrol Paneli</title>z
+    <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
+    <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+
+
+</head>
+<body class="">
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="WebServiceDeneme.aspx"><i class="menu-icon ti-email"></i>Web Servis</a>
+                    </li>                    
+                    <li>
+                        <a href="Galeri.aspx"><i class="menu-icon ti-email"></i>Galeri </a>
+                    </li>
+                    
+                    <li>
+                        <a href="HakkimizdakiBilgiler.aspx"><i class="menu-icon ti-email"></i>Hakkımızda </a>
+                    </li>
+                    <li>
+                        <a href="ReferansEkle.aspx"><i class="menu-icon ti-rocket"></i>Referanslar</a>
+                    </li>   
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-tasks"></i>Müsteriler</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="Kayitlar.aspx">Müşteriler</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="Girisler.aspx">Sistem Girişleri</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="Yorumlar.aspx">Gelen Yorumlar</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-tasks"></i>Arızalar</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="ArizaEkleme.aspx">İçerik Ekle</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-tasks"></i>Malzemeler</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-fort-awesome"></i><a href="MalzemeKategori.aspx">Kategori Ekle</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="Malzemeler.aspx">İçerik Ekle</a></li>
+                        </ul>
+                    </li> 
+                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-tasks"></i>İletişim</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="İletisimBilgileri.aspx">İletişim Bilgileri</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="Müsteri_iletisim.aspx">Müşteri İletişim</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </aside>
+
+    <div id="right-panel" class="right-panel">
+        <header id="header" class="header">
+            <div class="top-left">
+                <div class="navbar-header">
+                   
+                    <a class="navbar-brand hidden" href="./">
+                        
+                    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+                </div>
+            </div>
+            <div class="top-right">
+                <div class="header-menu">                   
+
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="img/user.png" alt="User Avatar">
+                        </a>
+                        <div class="user-menu dropdown-menu">  
+                            <a class="nav-link" href="Cikis.aspx"><i class="fa fa-power-off"></i>Çıkış</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <form id="form1" runat="server">
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
